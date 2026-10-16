@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB4E028A-082F-467C-BC82-B905C1455B98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.Purchasing</RootNamespace>
+    <AssemblyName>UnityEngine.Purchasing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>..\..\..\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Internal">
+      <HintPath>..\..\..\Unity.Services.Core.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>..\..\..\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalyticsClient.cs" />
+    <Compile Include="ConfigurationBuilder.cs" />
+    <Compile Include="CoreServicesEnvironmentSubject.cs" />
+    <Compile Include="EmptyAnalyticsAdapter.cs" />
+    <Compile Include="Extension\AbstractPurchasingModule.cs" />
+    <Compile Include="Extension\AbstractStore.cs" />
+    <Compile Include="Extension\ICatalogProvider.cs" />
+    <Compile Include="Extension\IPurchasingBinder.cs" />
+    <Compile Include="Extension\IPurchasingModule.cs" />
+    <Compile Include="Extension\IStore.cs" />
+    <Compile Include="Extension\IStoreCallback.cs" />
+    <Compile Include="Extension\IStoreConfiguration.cs" />
+    <Compile Include="Extension\ProductDescription.cs" />
+    <Compile Include="Extension\PurchaseFailureDescription.cs" />
+    <Compile Include="GoogleReceipt.cs" />
+    <Compile Include="IAnalyticsAdapter.cs" />
+    <Compile Include="IAnalyticsClient.cs" />
+    <Compile Include="ICoreServicesEnvironmentObserver.cs" />
+    <Compile Include="IDetailedStoreListener.cs" />
+    <Compile Include="IDs.cs" />
+    <Compile Include="IExtensionProvider.cs" />
+    <Compile Include="IInternalStoreListener.cs" />
+    <Compile Include="ILegacyUnityAnalytics.cs" />
+    <Compile Include="InitializationFailureReason.cs" />
+    <Compile Include="IStoreController.cs" />
+    <Compile Include="IStoreExtension.cs" />
+    <Compile Include="IStoreListener.cs" />
+    <Compile Include="IUnityServicesInitializationChecker.cs" />
+    <Compile Include="LegacyAnalyticsAdapter.cs" />
+    <Compile Include="LegacyAnalyticsWrapper.cs" />
+    <Compile Include="LegacyUnityAnalytics.cs" />
+    <Compile Include="LoggerExtensions.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="PayoutDefinition.cs" />
+    <Compile Include="PayoutType.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductCollection.cs" />
+    <Compile Include="ProductDefinition.cs" />
+    <Compile Include="ProductMetadata.cs" />
+    <Compile Include="ProductPurchaseUpdater.cs" />
+    <Compile Include="ProductType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseEventArgs.cs" />
+    <Compile Include="PurchaseFailedEventArgs.cs" />
+    <Compile Include="PurchaseFailureReason.cs" />
+    <Compile Include="PurchaseProcessingResult.cs" />
+    <Compile Include="PurchasingFactory.cs" />
+    <Compile Include="PurchasingManager.cs" />
+    <Compile Include="SimpleCatalogProvider.cs" />
+    <Compile Include="StoreListenerProxy.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="Telemetry\IapTelemetryException.cs" />
+    <Compile Include="Telemetry\ITelemetryDiagnostics.cs" />
+    <Compile Include="Telemetry\ITelemetryDiagnosticsInstanceWrapper.cs" />
+    <Compile Include="Telemetry\ITelemetryMetricEvent.cs" />
+    <Compile Include="Telemetry\ITelemetryMetricsInstanceWrapper.cs" />
+    <Compile Include="Telemetry\ITelemetryMetricsService.cs" />
+    <Compile Include="Telemetry\TelemetryDiagnosticNames.cs" />
+    <Compile Include="Telemetry\TelemetryDiagnosticParams.cs" />
+    <Compile Include="Telemetry\TelemetryDiagnostics.cs" />
+    <Compile Include="Telemetry\TelemetryDiagnosticsInstanceWrapper.cs" />
+    <Compile Include="Telemetry\TelemetryMetricDefinition.cs" />
+    <Compile Include="Telemetry\TelemetryMetricDefinitions.cs" />
+    <Compile Include="Telemetry\TelemetryMetricEvent.cs" />
+    <Compile Include="Telemetry\TelemetryMetricParams.cs" />
+    <Compile Include="Telemetry\TelemetryMetricsInstanceWrapper.cs" />
+    <Compile Include="Telemetry\TelemetryMetricsService.cs" />
+    <Compile Include="Telemetry\TelemetryMetricTypes.cs" />
+    <Compile Include="Telemetry\TelemetryQueue.cs" />
+    <Compile Include="TransactionLog.cs" />
+    <Compile Include="UnifiedReceipt.cs" />
+    <Compile Include="UnifiedReceiptFormatter.cs" />
+    <Compile Include="Uniject\IUtil.cs" />
+    <Compile Include="UnityPurchasing.cs" />
+    <Compile Include="UnityServicesInitializationChecker.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

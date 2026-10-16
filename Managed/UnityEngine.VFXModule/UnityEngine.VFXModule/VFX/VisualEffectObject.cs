@@ -1,0 +1,15 @@
+﻿using System;
+using UnityEngine.Bindings;
+using UnityEngine.Scripting;
+
+namespace UnityEngine.VFX
+{
+	// Token: 0x0200001E RID: 30
+	[NativeHeader("Modules/VFX/Public/ScriptBindings/VisualEffectAssetBindings.h")]
+	[NativeHeader("Modules/VFX/Public/VisualEffectAsset.h")]
+	[NativeHeader("VFXScriptingClasses.h")]
+	[UsedByNativeCode]
+	public abstract class VisualEffectObject : Object
+	{
+	}
+}

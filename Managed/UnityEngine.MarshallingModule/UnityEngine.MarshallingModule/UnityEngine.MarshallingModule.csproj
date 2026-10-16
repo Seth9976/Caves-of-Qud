@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AECD028-BE22-4B8B-9F69-2D992225A58A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine</RootNamespace>
+    <AssemblyName>UnityEngine.MarshallingModule</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractClass.cs" />
+    <Compile Include="BlittableCornerCases.cs" />
+    <Compile Include="BlittableStructTests.cs" />
+    <Compile Include="BoolStructTests.cs" />
+    <Compile Include="ClassToStruct.cs" />
+    <Compile Include="DelegateTests.cs" />
+    <Compile Include="DifferentMarshallingTestObject.cs" />
+    <Compile Include="EnumTests.cs" />
+    <Compile Include="ExceptionTests.cs" />
+    <Compile Include="ExceptionTypeTests.cs" />
+    <Compile Include="FieldBoundPropertyTests.cs" />
+    <Compile Include="IntPtrObjectTests.cs" />
+    <Compile Include="InvokeTests.cs" />
+    <Compile Include="ManagedObjectTests.cs" />
+    <Compile Include="MarshallingTestObject.cs" />
+    <Compile Include="MarshallingTests.cs" />
+    <Compile Include="MarshallingTests2.cs" />
+    <Compile Include="MyIntPtrObject.cs" />
+    <Compile Include="MyManagedObject.cs" />
+    <Compile Include="NonBlittableStructTests.cs" />
+    <Compile Include="NullCheckTests.cs" />
+    <Compile Include="OutArrayMarshallingTests.cs" />
+    <Compile Include="ParentOfNested.cs" />
+    <Compile Include="PrimitiveTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnArrayMarshallingTests.cs" />
+    <Compile Include="SomeEnum.cs" />
+    <Compile Include="StringTests.cs" />
+    <Compile Include="StructCoreString.cs" />
+    <Compile Include="StructCoreStringVector.cs" />
+    <Compile Include="StructFixedBuffer.cs" />
+    <Compile Include="StructInt.cs" />
+    <Compile Include="StructInt2.cs" />
+    <Compile Include="StructIntPtrObject.cs" />
+    <Compile Include="StructIntPtrObjectDynamicArray.cs" />
+    <Compile Include="StructIntPtrObjectVector.cs" />
+    <Compile Include="StructManagedObject.cs" />
+    <Compile Include="StructManagedObjectVector.cs" />
+    <Compile Include="StructNestedBlittable.cs" />
+    <Compile Include="StructSystemReflectionFieldInfo.cs" />
+    <Compile Include="StructSystemReflectionFieldInfoArray.cs" />
+    <Compile Include="StructSystemReflectionMethodInfo.cs" />
+    <Compile Include="StructSystemReflectionMethodInfoArray.cs" />
+    <Compile Include="StructSystemType.cs" />
+    <Compile Include="StructSystemTypeArray.cs" />
+    <Compile Include="StructUnityObject.cs" />
+    <Compile Include="StructUnityObjectDynamicArray.cs" />
+    <Compile Include="StructUnityObjectPPtr.cs" />
+    <Compile Include="StructUnityObjectVector.cs" />
+    <Compile Include="StructWith8ByteAndBoolFields.cs" />
+    <Compile Include="StructWithClassToStruct.cs" />
+    <Compile Include="StructWithExternTests.cs" />
+    <Compile Include="StructWithNonBlittableArrayField.cs" />
+    <Compile Include="StructWithStringIgnoredIntAndFloat.cs" />
+    <Compile Include="StructWithStringIntAndFloat.cs" />
+    <Compile Include="StructWithStringIntAndFloat2.cs" />
+    <Compile Include="StructWithTypedefManagedName.cs" />
+    <Compile Include="SystemReflectionFieldInfoMarshallingTests.cs" />
+    <Compile Include="SystemReflectionMethodInfoMarshallingTests.cs" />
+    <Compile Include="SystemTypeMarshallingTests.cs" />
+    <Compile Include="TypedefManagedNameTests.cs" />
+    <Compile Include="UnityObjectTests.cs" />
+    <Compile Include="ValueTypeArrayTests.cs" />
+    <Compile Include="ValueTypeListOfTTests.cs" />
+    <Compile Include="ValueTypeSpanTests.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

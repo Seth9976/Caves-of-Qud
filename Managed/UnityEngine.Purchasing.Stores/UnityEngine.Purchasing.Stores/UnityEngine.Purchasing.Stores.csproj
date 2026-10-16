@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5A2FE68-D996-4C13-BC72-7BB1CBE8A418}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.Purchasing.Stores</RootNamespace>
+    <AssemblyName>UnityEngine.Purchasing.Stores</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Purchasing.Common">
+      <HintPath>..\..\..\Purchasing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>..\..\..\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Internal">
+      <HintPath>..\..\..\Unity.Services.Core.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\..\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>..\..\..\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleCore">
+      <HintPath>..\..\..\UnityEngine.Purchasing.AppleCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleMacosStub">
+      <HintPath>..\..\..\UnityEngine.Purchasing.AppleMacosStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleStub">
+      <HintPath>..\..\..\UnityEngine.Purchasing.AppleStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityCore">
+      <HintPath>..\..\..\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityStub">
+      <HintPath>..\..\..\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.WinRTCore">
+      <HintPath>..\..\..\UnityEngine.Purchasing.WinRTCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.WinRTStub">
+      <HintPath>..\..\..\UnityEngine.Purchasing.WinRTStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stores\Util\JsonProductDescriptionsDeserializer.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="UnityEngine\Purchasing\AmazonApps.cs" />
+    <Compile Include="UnityEngine\Purchasing\AmazonAppStoreStoreExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\AndroidJavaStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\AndroidStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\AndroidStoreMeta.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppleAppStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppleJsonProductDescriptionsDeserializer.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppleProductMetadata.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppleStoreImpl.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppleStoreProductType.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppleStorePromotionVisibility.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppStoreMeta.cs" />
+    <Compile Include="UnityEngine\Purchasing\AppStoreSettingsInterface.cs" />
+    <Compile Include="UnityEngine\Purchasing\BillingClientStateListener.cs" />
+    <Compile Include="UnityEngine\Purchasing\BuildConfigInterface.cs" />
+    <Compile Include="UnityEngine\Purchasing\DialogRequest.cs" />
+    <Compile Include="UnityEngine\Purchasing\EnumerableExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\ExponentialRetryPolicy.cs" />
+    <Compile Include="UnityEngine\Purchasing\Extension\UnityUtil.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeAmazonExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeAppleConfiguration.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeAppleExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeGooglePlayStoreConfiguration.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeGooglePlayStoreExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeMicrosoftExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeStoreUIMode.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeTransactionHistoryExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\FakeUDPExtension.cs" />
+    <Compile Include="UnityEngine\Purchasing\FileReference.cs" />
+    <Compile Include="UnityEngine\Purchasing\GetAppleProductMetadataExtension.cs" />
+    <Compile Include="UnityEngine\Purchasing\GetGoogleProductMetadataExtension.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleAcknowledgePurchaseListener.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleBillingConnectionState.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleCachedQueryProductDetailsService.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleConnectionRetryPolicy.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleConsumeResponseListener.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleFetchPurchases.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleFinishTransactionService.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleLastKnownProductService.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlay.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayConfiguration.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayProductCallback.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayProrationMode.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayPurchaseCallback.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayReplacementMode.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayStoreExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayStoreFinishTransactionService.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayStorePurchaseService.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayStoreRetrieveProductsService.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePlayStoreService.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleProductMetadata.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePurchaseService.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePurchasesResponseListener.cs" />
+    <Compile Include="UnityEngine\Purchasing\GooglePurchaseUpdatedListener.cs" />
+    <Compile Include="UnityEngine\Purchasing\GoogleQueryPurchasesService.cs" />
+    <Compile Include="UnityEngine\Purchasing\IAmazonConfiguration.cs" />
+    <Compile Include="UnityEngine\Purchasing\IAmazonExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\IAndroidStoreSelection.cs" />
+    <Compile Include="UnityEngine\Purchasing\IAppleConfiguration.cs" />
+    <Compile Include="UnityEngine\Purchasing\IAppleExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\IFakeExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGoogleCachedQueryProductDetailsService.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGoogleFetchPurchases.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGooglePlayConfiguration.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGooglePlayConfigurationInternal.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGooglePlayStoreExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGooglePlayStoreExtensionsInternal.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGooglePlayStoreFinishTransactionService.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGooglePlayStorePurchaseService.cs" />
+    <Compile Include="UnityEngine\Purchasing\IGooglePlayStoreRetrieveProductsService.cs" />
+    <Compile Include="UnityEngine\Purchasing\IMicrosoftConfiguration.cs" />
+    <Compile Include="UnityEngine\Purchasing\IMicrosoftExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\INativeStoreProvider.cs" />
+    <Compile Include="UnityEngine\Purchasing\INativeUDPStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IBillingClientStateListener.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGoogleBillingClient.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGoogleFinishTransactionService.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGoogleLastKnownProductService.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGooglePlayStoreService.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGoogleProductCallback.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGooglePurchase.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGooglePurchaseBuilder.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGooglePurchaseCallback.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGooglePurchaseService.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGooglePurchaseStateEnumProvider.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGooglePurchaseUpdatedListener.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IGoogleQueryPurchasesService.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IProductDetailsConverter.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IProductDetailsQueryResponse.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IProductDetailsResponseConsolidator.cs" />
+    <Compile Include="UnityEngine\Purchasing\Interfaces\IQueryProductDetailsService.cs" />
+    <Compile Include="UnityEngine\Purchasing\InvalidProductTypeException.cs" />
+    <Compile Include="UnityEngine\Purchasing\InventoryInterface.cs" />
+    <Compile Include="UnityEngine\Purchasing\IProductCatalogImpl.cs" />
+    <Compile Include="UnityEngine\Purchasing\IStoreInternal.cs" />
+    <Compile Include="UnityEngine\Purchasing\ITransactionHistoryExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\IUDPExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\IUnityCallback.cs" />
+    <Compile Include="UnityEngine\Purchasing\JavaBridge.cs" />
+    <Compile Include="UnityEngine\Purchasing\JSONSerializer.cs" />
+    <Compile Include="UnityEngine\Purchasing\JSONStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\LifecycleNotifier.cs" />
+    <Compile Include="UnityEngine\Purchasing\ListExtension.cs" />
+    <Compile Include="UnityEngine\Purchasing\LocaleExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\LocalizedProductDescription.cs" />
+    <Compile Include="UnityEngine\Purchasing\MacAppStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\MetricizedAppleStoreImpl.cs" />
+    <Compile Include="UnityEngine\Purchasing\MetricizedGooglePlayStoreExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\MetricizedGooglePlayStoreService.cs" />
+    <Compile Include="UnityEngine\Purchasing\MetricizedJsonStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\AndroidJavaObjectExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GoogleBillingClient.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GoogleBillingResponseCode.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GoogleBillingResult.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GoogleBillingStrings.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GoogleProductTypeEnum.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GooglePurchase.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GooglePurchaseStateEnum.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GooglePurchaseStateEnumProvider.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\GoogleRetrieveProductsFailureReason.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\IGoogleBillingResult.cs" />
+    <Compile Include="UnityEngine\Purchasing\Models\ProductDescriptionQuery.cs" />
+    <Compile Include="UnityEngine\Purchasing\NativeStoreProvider.cs" />
+    <Compile Include="UnityEngine\Purchasing\NullProductIdException.cs" />
+    <Compile Include="UnityEngine\Purchasing\NullReceiptException.cs" />
+    <Compile Include="UnityEngine\Purchasing\Price.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductCatalog.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductCatalogImpl.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductCatalogItem.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductCatalogPayout.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductDefinitionExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductDetailsQueryResponse.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductDetailsResponseConsolidator.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductDetailsResponseListener.cs" />
+    <Compile Include="UnityEngine\Purchasing\ProductInfoInterface.cs" />
+    <Compile Include="UnityEngine\Purchasing\QueryHelper.cs" />
+    <Compile Include="UnityEngine\Purchasing\QueryProductDetailsService.cs" />
+    <Compile Include="UnityEngine\Purchasing\ReceiptParserException.cs" />
+    <Compile Include="UnityEngine\Purchasing\Registration\IapCoreInitializeCallback.cs" />
+    <Compile Include="UnityEngine\Purchasing\Result.cs" />
+    <Compile Include="UnityEngine\Purchasing\ScriptingStoreCallback.cs" />
+    <Compile Include="UnityEngine\Purchasing\ScriptingUnityCallback.cs" />
+    <Compile Include="UnityEngine\Purchasing\SerializationExtensions.cs" />
+    <Compile Include="UnityEngine\Purchasing\StandardPurchasingModule.cs" />
+    <Compile Include="UnityEngine\Purchasing\StoreCallbackExtensionMethods.cs" />
+    <Compile Include="UnityEngine\Purchasing\StoreConfiguration.cs" />
+    <Compile Include="UnityEngine\Purchasing\StoreID.cs" />
+    <Compile Include="UnityEngine\Purchasing\StoreServiceInterface.cs" />
+    <Compile Include="UnityEngine\Purchasing\StoreSpecificPurchaseErrorCode.cs" />
+    <Compile Include="UnityEngine\Purchasing\StoreSubscriptionInfoNotSupportedException.cs" />
+    <Compile Include="UnityEngine\Purchasing\Stores\Util\IRetryPolicy.cs" />
+    <Compile Include="UnityEngine\Purchasing\SubscriptionInfo.cs" />
+    <Compile Include="UnityEngine\Purchasing\SubscriptionManager.cs" />
+    <Compile Include="UnityEngine\Purchasing\SubscriptionPeriodUnit.cs" />
+    <Compile Include="UnityEngine\Purchasing\TimeSpanUnits.cs" />
+    <Compile Include="UnityEngine\Purchasing\TranslationLocale.cs" />
+    <Compile Include="UnityEngine\Purchasing\UDP.cs" />
+    <Compile Include="UnityEngine\Purchasing\UDPBindings.cs" />
+    <Compile Include="UnityEngine\Purchasing\UdpIapBridgeInterface.cs" />
+    <Compile Include="UnityEngine\Purchasing\UDPImpl.cs" />
+    <Compile Include="UnityEngine\Purchasing\UDPReflectionConsts.cs" />
+    <Compile Include="UnityEngine\Purchasing\UDPReflectionUtils.cs" />
+    <Compile Include="UnityEngine\Purchasing\UIFakeStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\UIFakeStoreDropdown.cs" />
+    <Compile Include="UnityEngine\Purchasing\UIFakeStoreWindow.cs" />
+    <Compile Include="UnityEngine\Purchasing\UnityActivity.cs" />
+    <Compile Include="UnityEngine\Purchasing\UserInfoInterface.cs" />
+    <Compile Include="UnityEngine\Purchasing\Utils\GooglePurchaseBuilder.cs" />
+    <Compile Include="UnityEngine\Purchasing\Utils\GoogleReceiptEncoder.cs" />
+    <Compile Include="UnityEngine\Purchasing\Utils\ProductDetailsConverter.cs" />
+    <Compile Include="UnityEngine\Purchasing\WindowsStore.cs" />
+    <Compile Include="UnityEngine\Purchasing\WinRTStore.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

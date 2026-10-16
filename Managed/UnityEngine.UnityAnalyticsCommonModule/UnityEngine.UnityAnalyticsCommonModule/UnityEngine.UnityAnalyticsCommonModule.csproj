@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{313DFD8F-E30B-48F8-A99A-C9F2AAF26148}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.UnityAnalyticsCommonModule</RootNamespace>
+    <AssemblyName>UnityEngine.UnityAnalyticsCommonModule</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityEditor\Analytics\AssetDatabaseRefreshAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\AssetExportAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\AssetImportAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\AssetImportStatusAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\BuildAssetBundleAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\CollabOperationAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\LicensingErrorAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\LicensingInitAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\MetalPatchShaderComputeBufferAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\NavmeshBakingAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerAddPackageAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerBaseAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerEmbedPackageAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerRemovePackageAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerResetPackageAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerResolveErrorPackageAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerResolvePackageAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerStartServerPackageAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\PackageManagerTestAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\ProjectSettingsInformationAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\SendGameBuildAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\StallMarkerAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\StallSummaryAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\TestAnalytic.cs" />
+    <Compile Include="UnityEditor\Analytics\VCProviderAnalytics.cs" />
+    <Compile Include="UnityEngine\Analytics\Analytic.cs" />
+    <Compile Include="UnityEngine\Analytics\AnalyticInfoAttribute.cs" />
+    <Compile Include="UnityEngine\Analytics\AnalyticsCommon.cs" />
+    <Compile Include="UnityEngine\Analytics\AnalyticsResult.cs" />
+    <Compile Include="UnityEngine\Analytics\IAnalytic.cs" />
+    <Compile Include="UnityEngine\Analytics\SubsystemsAnalyticBase.cs" />
+    <Compile Include="UnityEngine\Analytics\SubsystemsAnalyticInfo.cs" />
+    <Compile Include="UnityEngine\Analytics\SubsystemsAnalyticStart.cs" />
+    <Compile Include="UnityEngine\Analytics\SubsystemsAnalyticStop.cs" />
+    <Compile Include="UnityEngine\Analytics\UGSAnalyticsInternalTools.cs" />
+    <Compile Include="UnityEngine\Analytics\VRDeviceActiveControllersAnalytic.cs" />
+    <Compile Include="UnityEngine\Analytics\VRDeviceAnalyticAspect.cs" />
+    <Compile Include="UnityEngine\Analytics\VRDeviceAnalyticBase.cs" />
+    <Compile Include="UnityEngine\Analytics\VRDeviceMirrorAnalytic.cs" />
+    <Compile Include="UnityEngine\Analytics\VRDeviceUserAnalytic.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

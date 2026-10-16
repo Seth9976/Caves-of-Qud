@@ -1,0 +1,16 @@
+﻿using System;
+
+namespace System.ComponentModel
+{
+	/// <summary>Specifies when the <see cref="T:System.ComponentModel.License" /> can be used.</summary>
+	// Token: 0x020003CE RID: 974
+	public enum LicenseUsageMode
+	{
+		/// <summary>Used during runtime.</summary>
+		// Token: 0x04000F79 RID: 3961
+		Runtime,
+		/// <summary>Used during design time by a visual designer or the compiler.</summary>
+		// Token: 0x04000F7A RID: 3962
+		Designtime
+	}
+}

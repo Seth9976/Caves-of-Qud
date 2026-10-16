@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B85BE0B9-B001-4A84-9C2E-1644AC613035}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trivial.Mono</RootNamespace>
+    <AssemblyName>Trivial.Mono.Cecil.Mdb</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Trivial.Mono.Cecil">
+      <HintPath>..\..\..\Trivial.Mono.Cecil.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cecil\Mdb\MdbReader.cs" />
+    <Compile Include="Cecil\Mdb\MdbReaderProvider.cs" />
+    <Compile Include="Cecil\Mdb\MdbWriter.cs" />
+    <Compile Include="Cecil\Mdb\MdbWriterProvider.cs" />
+    <Compile Include="Cecil\Mdb\MethodEntryExtensions.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\AnonymousScopeEntry.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\CapturedScope.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\CapturedVariable.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\CodeBlockEntry.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\CompileUnitEntry.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\ICompileUnit.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\IMethodDef.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\ISourceFile.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\LineNumberEntry.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\LineNumberTable.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\LocalVariableEntry.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\MethodEntry.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\MonoSymbolFile.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\MonoSymbolFileException.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\MonoSymbolWriter.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\MyBinaryReader.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\MyBinaryWriter.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\NamespaceEntry.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\NamespaceInfo.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\OffsetTable.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\ScopeVariable.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\SourceFileEntry.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\SourceMethodBuilder.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\SourceMethodImpl.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\SymbolDocumentWriterImpl.cs" />
+    <Compile Include="CompilerServices\SymbolWriter\SymbolWriterImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

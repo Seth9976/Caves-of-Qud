@@ -1,0 +1,68 @@
+﻿using System;
+using System.Runtime.InteropServices;
+using Unity.Baselib.LowLevel;
+
+namespace Unity.Baselib
+{
+	// Token: 0x02000015 RID: 21
+	internal struct ErrorState
+	{
+		// Token: 0x06000024 RID: 36 RVA: 0x00002178 File Offset: 0x00000378
+		public void ThrowIfFailed()
+		{
+			bool flag = this.ErrorCode > Binding.Baselib_ErrorCode.Success;
+			if (flag)
+			{
+				throw new BaselibException(this);
+			}
+		}
+
+		// Token: 0x17000007 RID: 7
+		// (get) Token: 0x06000025 RID: 37 RVA: 0x0000219F File Offset: 0x0000039F
+		public Binding.Baselib_ErrorCode ErrorCode
+		{
+			get
+			{
+				return this.nativeErrorState.code;
+			}
+		}
+
+		// Token: 0x17000008 RID: 8
+		// (get) Token: 0x06000026 RID: 38 RVA: 0x000021AC File Offset: 0x000003AC
+		public unsafe Binding.Baselib_ErrorState* NativeErrorStatePtr
+		{
+			get
+			{
+				fixed (Binding.Baselib_ErrorState* ptr = &this.nativeErrorState)
+				{
+					return ptr;
+				}
+			}
+		}
+
+		// Token: 0x06000027 RID: 39 RVA: 0x000021CC File Offset: 0x000003CC
+		public unsafe string Explain(Binding.Baselib_ErrorState_ExplainVerbosity verbosity = Binding.Baselib_ErrorState_ExplainVerbosity.ErrorType_SourceLocation_Explanation)
+		{
+			fixed (Binding.Baselib_ErrorState* ptr = &this.nativeErrorState)
+			{
+				Binding.Baselib_ErrorState* ptr2 = ptr;
+				uint num = Binding.Baselib_ErrorState_Explain(ptr2, null, 0U, verbosity) + 1U;
+				IntPtr intPtr = Binding.Baselib_Memory_Allocate(new UIntPtr(num));
+				string text;
+				try
+				{
+					Binding.Baselib_ErrorState_Explain(ptr2, (byte*)(void*)intPtr, num, verbosity);
+					text = Marshal.PtrToStringAnsi(intPtr);
+				}
+				finally
+				{
+					Binding.Baselib_Memory_Free(intPtr);
+				}
+				return text;
+			}
+		}
+
+		// Token: 0x04000028 RID: 40
+		private Binding.Baselib_ErrorState nativeErrorState;
+	}
+}

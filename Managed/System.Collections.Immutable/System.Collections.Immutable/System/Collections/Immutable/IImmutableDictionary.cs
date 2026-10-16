@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
+namespace System.Collections.Immutable
+{
+	/// <summary>Represents an immutable collection of key/value pairs.  
+	///
+	///  NuGet package: System.Collections.Immutable (about immutable collections and how to install)</summary>
+	/// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+	/// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+	// Token: 0x0200001D RID: 29
+	[NullableContext(1)]
+	public interface IImmutableDictionary<[Nullable(2)] TKey, [Nullable(2)] TValue> : IReadOnlyDictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable, IReadOnlyCollection<KeyValuePair<TKey, TValue>>
+	{
+		/// <summary>Retrieves an empty dictionary that has the same ordering and key/value comparison rules as this dictionary instance.</summary>
+		/// <returns>An empty dictionary with equivalent ordering and key/value comparison rules.</returns>
+		// Token: 0x06000071 RID: 113
+		IImmutableDictionary<TKey, TValue> Clear();
+
+		/// <summary>Adds an element with the specified key and value to the dictionary.</summary>
+		/// <param name="key">The key of the element to add.</param>
+		/// <param name="value">The value of the element to add.</param>
+		/// <exception cref="T:System.ArgumentException">The given key already exists in the dictionary but has a different value.</exception>
+		/// <returns>A new immutable dictionary that contains the additional key/value pair.</returns>
+		// Token: 0x06000072 RID: 114
+		IImmutableDictionary<TKey, TValue> Add(TKey key, TValue value);
+
+		/// <summary>Adds the specified key/value pairs to the dictionary.</summary>
+		/// <param name="pairs">The key/value pairs to add.</param>
+		/// <exception cref="T:System.ArgumentException">One of the given keys already exists in the dictionary but has a different value.</exception>
+		/// <returns>A new immutable dictionary that contains the additional key/value pairs.</returns>
+		// Token: 0x06000073 RID: 115
+		IImmutableDictionary<TKey, TValue> AddRange([Nullable(new byte[] { 1, 0, 1, 1 })] IEnumerable<KeyValuePair<TKey, TValue>> pairs);
+
+		/// <summary>Sets the specified key and value in the immutable dictionary, possibly overwriting an existing value for the key.</summary>
+		/// <param name="key">The key of the entry to add.</param>
+		/// <param name="value">The key value to set.</param>
+		/// <returns>A new immutable dictionary that contains the specified key/value pair.</returns>
+		// Token: 0x06000074 RID: 116
+		IImmutableDictionary<TKey, TValue> SetItem(TKey key, TValue value);
+
+		/// <summary>Sets the specified key/value pairs in the immutable dictionary, possibly overwriting existing values for the keys.</summary>
+		/// <param name="items">The key/value pairs to set in the dictionary. If any of the keys already exist in the dictionary, this method will overwrite their previous values.</param>
+		/// <returns>A new immutable dictionary that contains the specified key/value pairs.</returns>
+		// Token: 0x06000075 RID: 117
+		IImmutableDictionary<TKey, TValue> SetItems([Nullable(new byte[] { 1, 0, 1, 1 })] IEnumerable<KeyValuePair<TKey, TValue>> items);
+
+		/// <summary>Removes the elements with the specified keys from the immutable dictionary.</summary>
+		/// <param name="keys">The keys of the elements to remove.</param>
+		/// <returns>A new immutable dictionary with the specified keys removed; or this instance if the specified keys cannot be found in the dictionary.</returns>
+		// Token: 0x06000076 RID: 118
+		IImmutableDictionary<TKey, TValue> RemoveRange(IEnumerable<TKey> keys);
+
+		/// <summary>Removes the element with the specified key from the immutable dictionary.</summary>
+		/// <param name="key">The key of the element to remove.</param>
+		/// <returns>A new immutable dictionary with the specified element removed; or this instance if the specified key cannot be found in the dictionary.</returns>
+		// Token: 0x06000077 RID: 119
+		IImmutableDictionary<TKey, TValue> Remove(TKey key);
+
+		/// <summary>Determines whether the immutable dictionary contains the specified key/value pair.</summary>
+		/// <param name="pair">The key/value pair to locate.</param>
+		/// <returns>
+		///   <see langword="true" /> if the specified key/value pair is found in the dictionary; otherwise, <see langword="false" />.</returns>
+		// Token: 0x06000078 RID: 120
+		bool Contains([Nullable(new byte[] { 0, 1, 1 })] KeyValuePair<TKey, TValue> pair);
+
+		/// <summary>Determines whether this dictionary contains a specified key.</summary>
+		/// <param name="equalKey">The key to search for.</param>
+		/// <param name="actualKey">The matching key located in the dictionary if found, or <c>equalkey</c> if no match is found.</param>
+		/// <returns>
+		///   <see langword="true" /> if a match for <paramref name="equalKey" /> is found; otherwise, <see langword="false" />.</returns>
+		// Token: 0x06000079 RID: 121
+		bool TryGetKey(TKey equalKey, out TKey actualKey);
+	}
+}

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8169918-0539-461B-BEF4-FF1CE460E6BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trivial.CodeSecurity</RootNamespace>
+    <AssemblyName>Trivial.CodeSecurity</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="Trivial.Mono.Cecil">
+      <HintPath>..\..\..\Trivial.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeEvaluation\CodeChecker.cs" />
+    <Compile Include="CodeEvaluation\EventChecker.cs" />
+    <Compile Include="CodeEvaluation\FieldChecker.cs" />
+    <Compile Include="CodeEvaluation\FieldReferenceChecker.cs" />
+    <Compile Include="CodeEvaluation\ICodeUsageProvider.cs" />
+    <Compile Include="CodeEvaluation\MethodChecker.cs" />
+    <Compile Include="CodeEvaluation\MethodReferenceChecker.cs" />
+    <Compile Include="CodeEvaluation\ModuleChecker.cs" />
+    <Compile Include="CodeEvaluation\PropertyChecker.cs" />
+    <Compile Include="CodeEvaluation\TypeChecker.cs" />
+    <Compile Include="CodeEvaluation\TypeReferenceChecker.cs" />
+    <Compile Include="CodeSecurityContext.cs" />
+    <Compile Include="CodeSecurityEngine.cs" />
+    <Compile Include="CodeSecurityLocation.cs" />
+    <Compile Include="CodeSecurityReport.cs" />
+    <Compile Include="CodeSecurityReportEntry.cs" />
+    <Compile Include="CodeSecurityRestrictions.cs" />
+    <Compile Include="CodeSecurityRestrictionsEntry.cs" />
+    <Compile Include="ICodeSecurityValidator.cs" />
+    <Compile Include="IllegalAssemblyReference.cs" />
+    <Compile Include="IllegalMemberReference.cs" />
+    <Compile Include="IllegalNamespaceReference.cs" />
+    <Compile Include="IllegalReferenceUsage.cs" />
+    <Compile Include="IllegalTypeReference.cs" />
+    <Compile Include="LoopDetection\ExecutionTimingServices.cs" />
+    <Compile Include="LoopDetection\LoopDetectionEngine.cs" />
+    <Compile Include="LoopDetection\LoopDetectionHashGenerator.cs" />
+    <Compile Include="LoopDetection\LoopDetectionInstructionPatcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,108 @@
+﻿using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using UnityEngine.Bindings;
+using UnityEngine.Scripting;
+
+namespace UnityEngine.XR
+{
+	// Token: 0x02000007 RID: 7
+	[NativeConditional("ENABLE_VR")]
+	public static class XRDevice
+	{
+		// Token: 0x17000011 RID: 17
+		// (get) Token: 0x06000020 RID: 32 RVA: 0x0000210B File Offset: 0x0000030B
+		[Obsolete("This is obsolete, and should no longer be used. Instead, find the active XRDisplaySubsystem and check that the running property is true (for details, see XRDevice.isPresent documentation).", true)]
+		public static bool isPresent
+		{
+			get
+			{
+				throw new NotSupportedException("XRDevice is Obsolete. Instead, find the active XRDisplaySubsystem and check to see if it is running.");
+			}
+		}
+
+		// Token: 0x17000012 RID: 18
+		// (get) Token: 0x06000021 RID: 33
+		[StaticAccessor("GetIVRDeviceSwapChain()", StaticAccessorType.ArrowWithDefaultReturnIfNull)]
+		[NativeName("DeviceRefreshRate")]
+		public static extern float refreshRate
+		{
+			[MethodImpl(MethodImplOptions.InternalCall)]
+			get;
+		}
+
+		// Token: 0x06000022 RID: 34
+		[StaticAccessor("GetIVRDeviceScripting()", StaticAccessorType.ArrowWithDefaultReturnIfNull)]
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		public static extern IntPtr GetNativePtr();
+
+		// Token: 0x06000023 RID: 35
+		[StaticAccessor("GetIVRDevice()", StaticAccessorType.ArrowWithDefaultReturnIfNull)]
+		[Obsolete("This is obsolete, and should no longer be used.  Please use XRInputSubsystem.GetTrackingOriginMode.")]
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		public static extern TrackingSpaceType GetTrackingSpaceType();
+
+		// Token: 0x06000024 RID: 36
+		[StaticAccessor("GetIVRDevice()", StaticAccessorType.ArrowWithDefaultReturnIfNull)]
+		[Obsolete("This is obsolete, and should no longer be used.  Please use XRInputSubsystem.TrySetTrackingOriginMode.")]
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		public static extern bool SetTrackingSpaceType(TrackingSpaceType trackingSpaceType);
+
+		// Token: 0x06000025 RID: 37 RVA: 0x00002118 File Offset: 0x00000318
+		[NativeName("DisableAutoVRCameraTracking")]
+		[StaticAccessor("GetIVRDevice()", StaticAccessorType.ArrowWithDefaultReturnIfNull)]
+		public static void DisableAutoXRCameraTracking([NotNull] Camera camera, bool disabled)
+		{
+			if (camera == null)
+			{
+				ThrowHelper.ThrowArgumentNullException(camera, "camera");
+			}
+			IntPtr intPtr = Object.MarshalledUnityObject.MarshalNotNull<Camera>(camera);
+			if (intPtr == 0)
+			{
+				ThrowHelper.ThrowArgumentNullException(camera, "camera");
+			}
+			XRDevice.DisableAutoXRCameraTracking_Injected(intPtr, disabled);
+		}
+
+		// Token: 0x06000026 RID: 38
+		[NativeName("UpdateEyeTextureMSAASetting")]
+		[StaticAccessor("GetIVRDeviceScripting()", StaticAccessorType.ArrowWithDefaultReturnIfNull)]
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		public static extern void UpdateEyeTextureMSAASetting();
+
+		// Token: 0x17000013 RID: 19
+		// (get) Token: 0x06000027 RID: 39
+		// (set) Token: 0x06000028 RID: 40
+		public static extern float fovZoomFactor
+		{
+			[MethodImpl(MethodImplOptions.InternalCall)]
+			get;
+			[StaticAccessor("GetIVRDeviceScripting()", StaticAccessorType.ArrowWithDefaultReturnIfNull)]
+			[NativeName("SetProjectionZoomFactor")]
+			[MethodImpl(MethodImplOptions.InternalCall)]
+			set;
+		}
+
+		// Token: 0x14000001 RID: 1
+		// (add) Token: 0x06000029 RID: 41 RVA: 0x00002150 File Offset: 0x00000350
+		// (remove) Token: 0x0600002A RID: 42 RVA: 0x00002184 File Offset: 0x00000384
+		[field: DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		public static event Action<string> deviceLoaded;
+
+		// Token: 0x0600002B RID: 43 RVA: 0x000021B8 File Offset: 0x000003B8
+		[RequiredByNativeCode]
+		private static void InvokeDeviceLoaded(string loadedDeviceName)
+		{
+			bool flag = XRDevice.deviceLoaded != null;
+			if (flag)
+			{
+				XRDevice.deviceLoaded(loadedDeviceName);
+			}
+		}
+
+		// Token: 0x0600002C RID: 44
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern void DisableAutoXRCameraTracking_Injected(IntPtr camera, bool disabled);
+	}
+}

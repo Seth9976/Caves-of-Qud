@@ -1,0 +1,127 @@
+﻿using System;
+using System.Buffers;
+using System.Runtime.CompilerServices;
+
+namespace Cysharp.Text
+{
+	// Token: 0x02000028 RID: 40
+	[NullableContext(2)]
+	[Nullable(0)]
+	public sealed class Utf16PreparedFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+	{
+		// Token: 0x17000022 RID: 34
+		// (get) Token: 0x0600012F RID: 303 RVA: 0x0000C11B File Offset: 0x0000A31B
+		[Nullable(1)]
+		public string FormatString
+		{
+			[NullableContext(1)]
+			get;
+		}
+
+		// Token: 0x17000023 RID: 35
+		// (get) Token: 0x06000130 RID: 304 RVA: 0x0000C123 File Offset: 0x0000A323
+		public int MinSize { get; }
+
+		// Token: 0x06000131 RID: 305 RVA: 0x0000C12C File Offset: 0x0000A32C
+		[NullableContext(1)]
+		public Utf16PreparedFormat(string format)
+		{
+			this.FormatString = format;
+			this.segments = PreparedFormatHelper.Utf16Parse(format);
+			int num = 0;
+			foreach (Utf16FormatSegment utf16FormatSegment in this.segments)
+			{
+				if (!utf16FormatSegment.IsFormatArgument)
+				{
+					num += utf16FormatSegment.Count;
+				}
+			}
+			this.MinSize = num;
+		}
+
+		// Token: 0x06000132 RID: 306 RVA: 0x0000C18C File Offset: 0x0000A38C
+		[NullableContext(1)]
+		public string Format(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14)
+		{
+			Utf16ValueStringBuilder utf16ValueStringBuilder = new Utf16ValueStringBuilder(true);
+			string text;
+			try
+			{
+				this.FormatTo<Utf16ValueStringBuilder>(ref utf16ValueStringBuilder, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
+				text = utf16ValueStringBuilder.ToString();
+			}
+			finally
+			{
+				utf16ValueStringBuilder.Dispose();
+			}
+			return text;
+		}
+
+		// Token: 0x06000133 RID: 307 RVA: 0x0000C1EC File Offset: 0x0000A3EC
+		[NullableContext(1)]
+		public void FormatTo<[Nullable(0)] TBufferWriter>(ref TBufferWriter sb, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14) where TBufferWriter : IBufferWriter<char>
+		{
+			ReadOnlySpan<char> readOnlySpan = this.FormatString.AsSpan();
+			foreach (Utf16FormatSegment utf16FormatSegment in this.segments)
+			{
+				switch (utf16FormatSegment.FormatIndex)
+				{
+				case -1:
+				{
+					ReadOnlySpan<char> readOnlySpan2 = readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count);
+					Span<char> span = sb.GetSpan(utf16FormatSegment.Count);
+					readOnlySpan2.TryCopyTo(span);
+					sb.Advance(utf16FormatSegment.Count);
+					break;
+				}
+				case 0:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T1>(ref sb, arg1, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg1");
+					break;
+				case 1:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T2>(ref sb, arg2, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg2");
+					break;
+				case 2:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T3>(ref sb, arg3, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg3");
+					break;
+				case 3:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T4>(ref sb, arg4, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg4");
+					break;
+				case 4:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T5>(ref sb, arg5, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg5");
+					break;
+				case 5:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T6>(ref sb, arg6, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg6");
+					break;
+				case 6:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T7>(ref sb, arg7, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg7");
+					break;
+				case 7:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T8>(ref sb, arg8, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg8");
+					break;
+				case 8:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T9>(ref sb, arg9, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg9");
+					break;
+				case 9:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T10>(ref sb, arg10, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg10");
+					break;
+				case 10:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T11>(ref sb, arg11, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg11");
+					break;
+				case 11:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T12>(ref sb, arg12, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg12");
+					break;
+				case 12:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T13>(ref sb, arg13, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg13");
+					break;
+				case 13:
+					Utf16FormatHelper.FormatTo<TBufferWriter, T14>(ref sb, arg14, utf16FormatSegment.Alignment, readOnlySpan.Slice(utf16FormatSegment.Offset, utf16FormatSegment.Count), "arg14");
+					break;
+				}
+			}
+		}
+
+		// Token: 0x04000068 RID: 104
+		[Nullable(1)]
+		private readonly Utf16FormatSegment[] segments;
+	}
+}

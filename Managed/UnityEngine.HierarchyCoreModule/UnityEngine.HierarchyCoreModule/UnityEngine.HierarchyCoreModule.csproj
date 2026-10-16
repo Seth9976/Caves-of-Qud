@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2133172C-AE3B-4212-9D92-A65B24297056}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.HierarchyCoreModule</RootNamespace>
+    <AssemblyName>UnityEngine.HierarchyCoreModule</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsUnmanagedAttribute.cs" />
+    <Compile Include="Unity\Hierarchy\DefaultHierarchySearchQueryParser.cs" />
+    <Compile Include="Unity\Hierarchy\Hierarchy.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyCommandList.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyFlattened.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyFlattenedNode.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyFlattenedNodeChildren.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNode.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNodeChildren.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNodeChildrenAlloc.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNodeChildrenFixed.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNodeFlags.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNodeMapUnmanaged.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNodeType.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNodeTypeHandlerBase.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyNodeTypeHandlerBaseEnumerable.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyPropertyDescriptor.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyPropertyId.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyPropertyStorageType.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyPropertyString.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyPropertyUnmanaged.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchySearchFilter.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchySearchFilterOperator.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchySearchQueryDescriptor.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyTestsHelper.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyViewModel.cs" />
+    <Compile Include="Unity\Hierarchy\HierarchyViewNodesEnumerable.cs" />
+    <Compile Include="Unity\Hierarchy\IHierarchyProperty.cs" />
+    <Compile Include="Unity\Hierarchy\IHierarchySearchQueryParser.cs" />
+    <Compile Include="Unity\Hierarchy\NativeSparseArray.cs" />
+    <Compile Include="Unity\Hierarchy\NativeSparseArrayResizePolicy.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

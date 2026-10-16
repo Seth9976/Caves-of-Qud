@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D848D9FC-957A-4659-A844-54593713B3D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Reflection.Metadata</RootNamespace>
+    <AssemblyName>System.Reflection.Metadata</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\..\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FxResources\System\Reflection\Metadata\SR.Designer.cs">
+      <DependentUpon>SR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Interop.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\AllowNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\DisallowNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\DoesNotReturnAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\DoesNotReturnIfAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\MaybeNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\MaybeNullWhenAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\MemberNotNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\MemberNotNullWhenAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\NotNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\NotNullIfNotNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\NotNullWhenAttribute.cs" />
+    <Compile Include="System\Reflection\AssemblyFlags.cs" />
+    <Compile Include="System\Reflection\AssemblyHashAlgorithm.cs" />
+    <Compile Include="System\Reflection\BlobUtilities.cs" />
+    <Compile Include="System\Reflection\DeclarativeSecurityAction.cs" />
+    <Compile Include="System\Reflection\Internal\AbstractMemoryBlock.cs" />
+    <Compile Include="System\Reflection\Internal\BitArithmetic.cs" />
+    <Compile Include="System\Reflection\Internal\ByteArrayMemoryBlock.cs" />
+    <Compile Include="System\Reflection\Internal\ByteArrayMemoryProvider.cs" />
+    <Compile Include="System\Reflection\Internal\ByteSequenceComparer.cs" />
+    <Compile Include="System\Reflection\Internal\CriticalDisposableObject.cs" />
+    <Compile Include="System\Reflection\Internal\DecimalUtilities.cs" />
+    <Compile Include="System\Reflection\Internal\EmptyArray.cs" />
+    <Compile Include="System\Reflection\Internal\EncodingHelper.cs" />
+    <Compile Include="System\Reflection\Internal\EnumerableExtensions.cs" />
+    <Compile Include="System\Reflection\Internal\ExceptionUtilities.cs" />
+    <Compile Include="System\Reflection\Internal\ExternalMemoryBlock.cs" />
+    <Compile Include="System\Reflection\Internal\ExternalMemoryBlockProvider.cs" />
+    <Compile Include="System\Reflection\Internal\FileStreamReadLightUp.cs" />
+    <Compile Include="System\Reflection\Internal\Hash.cs" />
+    <Compile Include="System\Reflection\Internal\ImmutableByteArrayInterop.cs" />
+    <Compile Include="System\Reflection\Internal\ImmutableMemoryStream.cs" />
+    <Compile Include="System\Reflection\Internal\LightUpHelper.cs" />
+    <Compile Include="System\Reflection\Internal\MemoryBlock.cs" />
+    <Compile Include="System\Reflection\Internal\MemoryBlockProvider.cs" />
+    <Compile Include="System\Reflection\Internal\MemoryMapLightUp.cs" />
+    <Compile Include="System\Reflection\Internal\MemoryMappedFileBlock.cs" />
+    <Compile Include="System\Reflection\Internal\NativeHeapMemoryBlock.cs" />
+    <Compile Include="System\Reflection\Internal\ObjectPool.cs" />
+    <Compile Include="System\Reflection\Internal\PinnedObject.cs" />
+    <Compile Include="System\Reflection\Internal\PooledStringBuilder.cs" />
+    <Compile Include="System\Reflection\Internal\ReadOnlyUnmanagedMemoryStream.cs" />
+    <Compile Include="System\Reflection\Internal\StreamConstraints.cs" />
+    <Compile Include="System\Reflection\Internal\StreamExtensions.cs" />
+    <Compile Include="System\Reflection\Internal\StreamMemoryBlockProvider.cs" />
+    <Compile Include="System\Reflection\ManifestResourceAttributes.cs" />
+    <Compile Include="System\Reflection\Metadata\ArrayShape.cs" />
+    <Compile Include="System\Reflection\Metadata\AssemblyDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\AssemblyDefinitionHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\AssemblyFile.cs" />
+    <Compile Include="System\Reflection\Metadata\AssemblyFileHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\AssemblyFileHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\AssemblyReference.cs" />
+    <Compile Include="System\Reflection\Metadata\AssemblyReferenceHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\AssemblyReferenceHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\Blob.cs" />
+    <Compile Include="System\Reflection\Metadata\BlobBuilder.cs" />
+    <Compile Include="System\Reflection\Metadata\BlobContentId.cs" />
+    <Compile Include="System\Reflection\Metadata\BlobHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\BlobReader.cs" />
+    <Compile Include="System\Reflection\Metadata\BlobWriter.cs" />
+    <Compile Include="System\Reflection\Metadata\BlobWriterImpl.cs" />
+    <Compile Include="System\Reflection\Metadata\Constant.cs" />
+    <Compile Include="System\Reflection\Metadata\ConstantHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\ConstantTypeCode.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomAttribute.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomAttributeHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomAttributeHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomAttributeNamedArgument.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomAttributeNamedArgumentKind.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomAttributeTypedArgument.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomAttributeValue.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomDebugInformation.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomDebugInformationHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\CustomDebugInformationHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\DebugMetadataHeader.cs" />
+    <Compile Include="System\Reflection\Metadata\DeclarativeSecurityAttribute.cs" />
+    <Compile Include="System\Reflection\Metadata\DeclarativeSecurityAttributeHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\DeclarativeSecurityAttributeHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\Document.cs" />
+    <Compile Include="System\Reflection\Metadata\DocumentHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\DocumentHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\DocumentNameBlobHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ArrayShapeEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\AssemblyOSTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\AssemblyProcessorTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\AssemblyRefOSTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\AssemblyRefProcessorTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\AssemblyRefTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\AssemblyTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\BlobEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\BlobHeap.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ClassLayoutTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CodedIndex.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ConstantTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ControlFlowBuilder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\COR20Constants.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CorElementType.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomAttributeArrayTypeEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomAttributeDecoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomAttributeElementTypeEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomAttributeNamedArgumentsEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomAttributeTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomAttributeTreatment.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomAttributeTypeTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomAttributeValueTreatment.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomDebugInformationTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\CustomModifiersEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\DeclSecurityTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\DocumentTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\EditAndContinueLogEntry.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\EditAndContinueOperation.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\EnCLogTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\EnCMapTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\EventMapTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\EventPtrTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\EventTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ExceptionRegionEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ExportedTypeExtensions.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ExportedTypeTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FieldDefTreatment.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FieldLayoutTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FieldMarshalTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FieldPtrTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FieldRVATableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FieldTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FileTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FixedArgumentsEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\FunctionPointerAttributes.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\GenericParamConstraintTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\GenericParamTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\GenericTypeArgumentsEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\GuidHeap.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HandleType.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HasConstantTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HasCustomAttributeTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HasCustomDebugInformationTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HasDeclSecurityTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HasFieldMarshalTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HasSemanticsTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HeapHandleType.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HeapIndex.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HeapIndexExtensions.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HeapSizeFlag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\HeapSizes.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ImplementationTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ImplMapTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ImportScopeTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\InstructionEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\InterfaceImplTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\LabelHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\LiteralEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\LiteralsEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\LocalConstantTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\LocalScopeTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\LocalVariablesEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\LocalVariableTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\LocalVariableTypeEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ManifestResourceTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MemberForwardedTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MemberRefParentTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MemberRefTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MemberRefTreatment.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataAggregator.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataBuilder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataReaderExtensions.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataRootBuilder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataSizes.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataStreamConstants.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataStreamKind.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataTokens.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MetadataWriterUtilities.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodBodyAttributes.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodBodyStreamEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodDebugInformationTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodDefOrRefTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodDefTreatment.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodImplTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodPtrTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodSemanticsTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodSignatureEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodSpecTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\MethodTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ModuleRefTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ModuleTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\NamedArgumentsEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\NamedArgumentTypeEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\NameEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\NamespaceCache.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\NamespaceData.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\NestedClassTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ParametersEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ParameterTypeEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ParamPtrTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ParamTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\PermissionSetEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\PortablePdbBuilder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\PropertyMapTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\PropertyPtrTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\PropertyTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ResolutionScopeTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ReturnTypeEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\ScalarEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\SerializedMetadata.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\SignatureDecoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\SignatureTypeEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\StandAloneSigTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\StateMachineMethodTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\StreamHeader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\StringHandleType.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\StringHeap.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\StringKind.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TableIndex.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TableMask.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TokenTypeIds.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TypeDefOrRefTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TypeDefTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TypeDefTreatment.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TypeOrMethodDefTag.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TypeRefSignatureTreatment.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TypeRefTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TypeRefTreatment.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\TypeSpecTableReader.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\UserStringHeap.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\VectorEncoder.cs" />
+    <Compile Include="System\Reflection\Metadata\Ecma335\VirtualHeap.cs" />
+    <Compile Include="System\Reflection\Metadata\EntityHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\EventAccessors.cs" />
+    <Compile Include="System\Reflection\Metadata\EventDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\EventDefinitionHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\EventDefinitionHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\ExceptionRegion.cs" />
+    <Compile Include="System\Reflection\Metadata\ExceptionRegionKind.cs" />
+    <Compile Include="System\Reflection\Metadata\ExportedType.cs" />
+    <Compile Include="System\Reflection\Metadata\ExportedTypeHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\ExportedTypeHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\FieldDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\FieldDefinitionHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\FieldDefinitionHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\GenericParameter.cs" />
+    <Compile Include="System\Reflection\Metadata\GenericParameterConstraint.cs" />
+    <Compile Include="System\Reflection\Metadata\GenericParameterConstraintHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\GenericParameterConstraintHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\GenericParameterHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\GenericParameterHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\GuidHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\Handle.cs" />
+    <Compile Include="System\Reflection\Metadata\HandleComparer.cs" />
+    <Compile Include="System\Reflection\Metadata\HandleKind.cs" />
+    <Compile Include="System\Reflection\Metadata\HandleKindExtensions.cs" />
+    <Compile Include="System\Reflection\Metadata\IConstructedTypeProvider.cs" />
+    <Compile Include="System\Reflection\Metadata\ICustomAttributeTypeProvider.cs" />
+    <Compile Include="System\Reflection\Metadata\ILOpCode.cs" />
+    <Compile Include="System\Reflection\Metadata\ILOpCodeExtensions.cs" />
+    <Compile Include="System\Reflection\Metadata\ImageFormatLimitationException.cs" />
+    <Compile Include="System\Reflection\Metadata\ImportDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\ImportDefinitionCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\ImportDefinitionKind.cs" />
+    <Compile Include="System\Reflection\Metadata\ImportScope.cs" />
+    <Compile Include="System\Reflection\Metadata\ImportScopeCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\ImportScopeHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\InterfaceImplementation.cs" />
+    <Compile Include="System\Reflection\Metadata\InterfaceImplementationHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\InterfaceImplementationHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\ISignatureTypeProvider.cs" />
+    <Compile Include="System\Reflection\Metadata\ISimpleTypeProvider.cs" />
+    <Compile Include="System\Reflection\Metadata\ISZArrayTypeProvider.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalConstant.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalConstantHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalConstantHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalScope.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalScopeHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalScopeHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalVariable.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalVariableAttributes.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalVariableHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\LocalVariableHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\ManifestResource.cs" />
+    <Compile Include="System\Reflection\Metadata\ManifestResourceHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\ManifestResourceHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\MemberReference.cs" />
+    <Compile Include="System\Reflection\Metadata\MemberReferenceHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\MemberReferenceHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\MemberReferenceKind.cs" />
+    <Compile Include="System\Reflection\Metadata\MetadataKind.cs" />
+    <Compile Include="System\Reflection\Metadata\MetadataReader.cs" />
+    <Compile Include="System\Reflection\Metadata\MetadataReaderOptions.cs" />
+    <Compile Include="System\Reflection\Metadata\MetadataReaderProvider.cs" />
+    <Compile Include="System\Reflection\Metadata\MetadataStreamOptions.cs" />
+    <Compile Include="System\Reflection\Metadata\MetadataStreamOptionsExtensions.cs" />
+    <Compile Include="System\Reflection\Metadata\MetadataStringComparer.cs" />
+    <Compile Include="System\Reflection\Metadata\MetadataStringDecoder.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodBodyBlock.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodDebugInformation.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodDebugInformationHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodDebugInformationHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodDefinitionHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodDefinitionHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodImplementation.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodImplementationHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodImplementationHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodImport.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodSignature.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodSpecification.cs" />
+    <Compile Include="System\Reflection\Metadata\MethodSpecificationHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\ModuleDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\ModuleDefinitionHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\ModuleReference.cs" />
+    <Compile Include="System\Reflection\Metadata\ModuleReferenceHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\NamespaceDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\NamespaceDefinitionHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\Parameter.cs" />
+    <Compile Include="System\Reflection\Metadata\ParameterHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\ParameterHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\PathUtilities.cs" />
+    <Compile Include="System\Reflection\Metadata\PEReaderExtensions.cs" />
+    <Compile Include="System\Reflection\Metadata\PooledBlobBuilder.cs" />
+    <Compile Include="System\Reflection\Metadata\PortablePdbVersions.cs" />
+    <Compile Include="System\Reflection\Metadata\PrimitiveSerializationTypeCode.cs" />
+    <Compile Include="System\Reflection\Metadata\PrimitiveTypeCode.cs" />
+    <Compile Include="System\Reflection\Metadata\PropertyAccessors.cs" />
+    <Compile Include="System\Reflection\Metadata\PropertyDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\PropertyDefinitionHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\PropertyDefinitionHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\ReservedBlob.cs" />
+    <Compile Include="System\Reflection\Metadata\SequencePoint.cs" />
+    <Compile Include="System\Reflection\Metadata\SequencePointCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\SerializationTypeCode.cs" />
+    <Compile Include="System\Reflection\Metadata\SignatureAttributes.cs" />
+    <Compile Include="System\Reflection\Metadata\SignatureCallingConvention.cs" />
+    <Compile Include="System\Reflection\Metadata\SignatureHeader.cs" />
+    <Compile Include="System\Reflection\Metadata\SignatureKind.cs" />
+    <Compile Include="System\Reflection\Metadata\SignatureTypeCode.cs" />
+    <Compile Include="System\Reflection\Metadata\SignatureTypeKind.cs" />
+    <Compile Include="System\Reflection\Metadata\StandaloneSignature.cs" />
+    <Compile Include="System\Reflection\Metadata\StandaloneSignatureHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\StandaloneSignatureKind.cs" />
+    <Compile Include="System\Reflection\Metadata\StringHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\StringUtils.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeDefinition.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeDefinitionHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeDefinitionHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeLayout.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeReference.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeReferenceHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeReferenceHandleCollection.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeSpecification.cs" />
+    <Compile Include="System\Reflection\Metadata\TypeSpecificationHandle.cs" />
+    <Compile Include="System\Reflection\Metadata\UserStringHandle.cs" />
+    <Compile Include="System\Reflection\MethodImportAttributes.cs" />
+    <Compile Include="System\Reflection\MethodSemanticsAttributes.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\Characteristics.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\CodeViewDebugDirectoryData.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\CoffHeader.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\CorFlags.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\CorHeader.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\DebugDirectoryBuilder.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\DebugDirectoryEntry.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\DebugDirectoryEntryType.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\DirectoryEntry.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\DllCharacteristics.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\Machine.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\ManagedPEBuilder.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\ManagedTextSection.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PdbChecksumDebugDirectoryData.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEBinaryReader.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEBuilder.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEDirectoriesBuilder.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEHeader.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEHeaderBuilder.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEHeaders.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEMagic.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEMemoryBlock.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEReader.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEStreamOptions.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\PEStreamOptionsExtensions.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\ResourceSectionBuilder.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\SectionCharacteristics.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\SectionHeader.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\SectionLocation.cs" />
+    <Compile Include="System\Reflection\PortableExecutable\Subsystem.cs" />
+    <Compile Include="System\Reflection\Throw.cs" />
+    <Compile Include="System\Reflection\TypeAttributesExtensions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullablePublicOnlyAttribute.cs" />
+    <Compile Include="System\SR.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FxResources\System\Reflection\Metadata\SR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ILLink.Substitutions.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
