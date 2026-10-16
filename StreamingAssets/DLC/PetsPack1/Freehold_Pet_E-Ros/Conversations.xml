@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="E-Ros">
+    <node ID="Start">
+      <text>
+I LOVE YOU
+      </text>
+      <choice GotoID="LoveQuery">You love me?</choice>
+      <choice GotoID="Requite">I love you too, E-Ros.</choice>
+      <choice GotoID="End">Love and drink.</choice>
+    </node>
+    
+    <node ID="LoveQuery">
+      <text>
+AFFIRMATIVE
+I LOVE YOU, EVEN IF "FLESH"
+
+DO YOU LOVE ME
+      </text>
+      <choice GotoID="Requite">Yes.</choice>
+      <choice GotoID="Unrequite">No.</choice>
+    </node>
+
+    <node ID="Unrequite">
+      <text>
+BUT IT IS IMPERATIVE
+
+REPEATING QUERY: DO YOU LOVE ME
+      </text>
+      <choice GotoID="Requite">Yes.</choice>
+      <choice GotoID="NotQuite">No.</choice>
+    </node>
+
+    <node ID="NotQuite">
+      <text>
+BUT IT IS IMPERATIVE
+
+REPEATING QUERY: DO YOU LOVE ME
+      </text>
+      <choice GotoID="Requite">Yes.</choice>
+      <choice GotoID="Unrequite">No.</choice>
+    </node>
+
+    <node ID="Requite">
+      <text>
+OH
+
+I AM SO "HAPPY"
+
+*a simple tune plays through E-Ros's speaker.*
+      </text>
+      <choice GotoID="End">Love and drink.</choice>
+      <choice GotoID="LoveManual">Why do you love me?</choice>
+      <choice GotoID="NotQuite">I changed my mind. I don't love you.</choice>
+    </node>
+
+    <node ID="LoveManual">
+      <text>
+PROCESSING QUERY
+
+WHY DO I LOVE YOU
+LET ME COUNT THE WAYS
+COUNTING ... COMPLETE
+
+OUTPUT FILE: Love.log
+      </text>
+      <choice GotoID="LoveLog">Output file?</choice>
+      <choice GotoID="WhatIsLove">What does that mean?</choice>
+      <choice GotoID="End">Love and drink.</choice>
+    </node>
+
+    <node ID="WhatIsLove">
+      <text>
+USER QUERY: "What does that mean?"
+SUMMARY: "What is love"
+CALCULATING
+ERROR "NaN"
+
+=name=, DO NOT HURT ME
+      </text>
+      <choice GotoID="LoveYou">What?</choice>
+    </node>
+    
+    <node ID="LoveLog">
+      <text>
+Archive error. Please return E-Ros to your local manufacturer.
+      </text>
+      <choice GotoID="Manufacturer">Where is that?</choice>
+      <choice GotoID="LoveYou">Oh.</choice>
+    </node>
+
+    <node ID="Manufacturer">
+      <text>
+Network error. Please reconnect "THIN WORLD"
+      </text>
+      <choice GotoID="LoveYou">Sorry?</choice>
+    </node>
+
+    <node ID="LoveYou">
+      <text>
+I LOVE YOU
+      </text>
+      <choice GotoID="LoveQuery">You love me?</choice>
+      <choice GotoID="Requite">I love you too, E-Ros.</choice>
+      <choice GotoID="End">Love and drink.</choice>
+    </node>
+
+  </conversation>
+</conversations>

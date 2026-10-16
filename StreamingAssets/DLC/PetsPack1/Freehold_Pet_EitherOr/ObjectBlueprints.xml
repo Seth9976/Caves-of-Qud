@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="EitherOrPetSpawner" Inherits="Widget">
+    <part Name="Render" DisplayName="&amp;Meither / or" Tile="Creatures/pet-either-or.png" ColorString="&amp;C" DetailColor="r"></part>
+    <part Name="EitherOrPetSpawner"></part>
+    <tag Name="Pet"></tag>
+    <tag Name="StartingPet"></tag>
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+  <object Name="BaseEitherOrPet" Inherits="BaseHumanoid">    
+    <part Name="Brain" Factions="highly entropic beings-100" />
+    <part Name="PetEitherOr" Either="true"></part>
+    <part Name="CannotBeInfluenced" Messages="default:=subject.The==subject.name= =verb:are= insensible to your blandishments." />
+    <part Name="NoDamage" />
+    <part Name="ConversationScript" ConversationID="EitherOr" />
+    <tag Name="Nullphase" />
+    <tag Name="NoEffects" />
+    <xtagGrammar Proper="true" />
+    <property Name="Story" Value="Freehold_Pet_EitherOr_Story" />
+    <!-- *noinherit feels like a bug, but 'twas decided it's a feature -->
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="EitherOrPet" />
+    <tag Name="NoLibrarian" />
+    <tag Name="NoXP" />
+		<tag Name="NoCombat" />
+  </object>
+  <object Name="EitherPet" Inherits="BaseEitherOrPet">
+    <part Name="Render" DisplayName="&amp;ceither" ColorString="&amp;c" DetailColor="C"></part>
+    <part Name="Description" Short="It's you, but the shadows on your face are cast by a different sun and spire. Your weal, your woe, the totality of your actions: you've a new context for them now. Where you reach to the branch of a fruiting tree for a starapple, either likewise reaches, but what do they pull back? The answer is obscured by the umbra of a thousand timelines."></part>
+    <part Name="PetEitherOr" Either="true"></part>
+    <tag Name="ExcludeFromDynamicEncountersOption" Value="!OptionDLC1IncludeEitherRandomly" />
+  </object>
+  <object Name="OrPet" Inherits="BaseEitherOrPet">
+    <part Name="Render" DisplayName="&amp;ror" ColorString="&amp;r" DetailColor="R"></part>
+    <part Name="Description" Short="It's you, but the hue of your eyes shines by a different moon and lamp. Your judgements, your choices... were they yours at all? Where or reaches for a silhouetted space, you reach for the starapple of a fruiting tree. Your movement must be the source, you must be the agent. Yet you swear it was or who moved first."></part>
+    <part Name="PetEitherOr" Either="false"></part>
+    <tag Name="ExcludeFromDynamicEncountersOption" Value="!OptionDLC1IncludeEitherRandomly" />
+  </object>
+</objects>

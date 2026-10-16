@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="ManOpener">
+    <node ID="Start">
+      <text>
+        &amp;w*Man Opener chirps.*~
+        &amp;w*Man Opener ducks her head, asking for pets.*~
+        &amp;w*Man Opener scuffs the ground with her horns.*~
+        &amp;w*Man Opener has something in her mouth, but won't let you see it.*~
+        &amp;w*Man Opener snorts.*~
+        &amp;w*Man Opener growls happily.*~
+        &amp;w*Man Opener watches you intently.*~
+        &amp;w*Man Opener frolics.*~
+        &amp;w*Man Opener chews a broken axe haft she won during a previous battle.*~
+        &amp;w*Man Opener chews half a helmet she won during a previous battle.*~
+        &amp;w*Man Opener is chewing a hand she won during a previous battle.*~
+        &amp;w*Man Opener directs a wistful gaze toward the horizon.*
+      </text>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+  </conversation>
+</conversations>

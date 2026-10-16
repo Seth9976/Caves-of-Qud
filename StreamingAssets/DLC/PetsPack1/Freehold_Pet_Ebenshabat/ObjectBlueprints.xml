@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Ebenshabat" Inherits="BaseRobot">
+    <part Name="Body" Anatomy="HoverRobot" />
+    <part Name="Render" DisplayName="&amp;MEbenshabat" Tile="Creatures/sw_ebenshabat.bmp" ColorString="&amp;c" DetailColor="w" />
+    <part Name="Description" Short="His chassis is illuminated with the artifacts of life: dirt smeared over his undercarriage, dead leaves pinned by bolts to his hardpoints, lichen angling for sunlight on his armatures. A hat crumpled like cheese cloth shades the glass lune of his sensor array, where with a dim but golden iris he sees, and muses."></part>
+    <part Name="ConversationScript" ConversationID="Ebenshabat" />
+    <part Name="PetEbenshabat"></part>
+    <stat Name="Level" Value="4"></stat>
+    <stat Name="AV" Value="2"></stat>
+    <stat Name="Willpower" sValue="28"></stat>
+    <stat Name="Agility" sValue="16"></stat>
+    <stat Name="Hitpoints" Value="70"></stat>
+    <tag Name="PetResponse" Value="plays a sound recording of juice sloshing in a glass pitcher,plays a sound recording of a door creaking open,plays a sound recording of grass rustling,plays a sound recording of people murmuring,plays a backwards sound recording of glass breaking" />
+    <part Name="Pettable" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <inventoryobject Blueprint="Leather Boots" />
+    <inventoryobject Blueprint="Woven Tunic" />
+    <inventoryobject Blueprint="Wide-brimmed Hat" />
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <property Name="Story" Value="Freehold_Pet_Ebenshabat_Story" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="NoCombat"></tag>
+  </object>
+</objects>

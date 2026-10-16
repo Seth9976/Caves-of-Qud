@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+  <book ID="Freehold_Pet_Ercolano_Story" Title="&amp;WThe Semiotics of Furniture&amp;y" Format="Auto" Margins="1,2,2,2">
+    <page>&amp;wDoors&amp;y
+
+* Onomatopoetically named for the sound they make when they open ("dooooooooooooooor")
+* Weirdly insistent on bidirectionality
+* "Ajar" puns and "knock knock" jokes
+* Unfairly saddled with the metaphorical baggage of change and transition, when really they just stand there
+
+&amp;wWalls&amp;y
+
+* Clear sense of boundaries
+* Like lockpicks, utility often depends on size
+* Fun (and productive) to imagine what might live inside them
+
+&amp;wTables&amp;y
+
+* Nature's workhorses
+* Emblems of our collection delusion (meant to be used for getting things done, much better at having things piled on top)
+* Allow for an ontological underspace
+* "Legs"
+
+&amp;wChairs&amp;y
+
+* Invitation of stillness in a shifting world
+* They make you shorter
+* Form follows function
+* Also "legs"
+    </page>
+  </book>
+  <book ID="ErcolanoSitSayings" Title="ErcolanoSitSayings">
+    <page>Ooof.</page>
+    <page>Ogggh!</page>
+    <page>There you go.</page>
+    <page>Heh.</page>
+    <page>Oof.</page>
+    <page>Ooooooof.</page>
+    <page>Rest, friend.</page>
+    <page>Ogggggh.</page>
+    <page>Heheh.</page>
+    <page>Quet... quetzal!</page>
+  </book>
+</books>

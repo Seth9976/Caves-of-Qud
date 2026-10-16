@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Herman" Inherits="NPC">
+    <part Name="Render" DisplayName="{{M|Herman}}" Tile="Creatures/pet-herman.png" ColorString="&amp;w" DetailColor="W" />
+    <part Name="Description" Short="The strangest arconaut you've ever seen has bulging skin that seems to roil underneath. =pronouns.Possessive= movements are shuddery, slow, imperfect, but coordinated at least at some rudimentary level. The gait is lurching, the countenance is unnatural, but the intentionality behind =pronouns.possessive= hideous smile is, nonetheless, pure." />
+    <part Name="Corpse" CorpseChance="0" />
+    <part Name="ConversationScript" ConversationID="Freehold_Pet_Herman" />
+    <part Name="Brain" Hostile="false" Mobile="true" Factions="Worms-100" />
+    <stat Name="Level" Value="4" />
+    <mutation Name="Regeneration" Level="9" />
+    <mutation Name="Telepathy" />
+    <mutation Name="DarkVision" Level="3" />
+    <stat Name="Hitpoints" Value="100" />
+    <stat Name="Agility" sValue="14" />
+    <stat Name="Strength" sValue="16,1d3,(t-1)d3" />    
+    <stat Name="Toughness" sValue="16,1d3,(t-1)d2" />
+    <stat Name="Intelligence" sValue="8,1d2,(t-1)d2-1" />
+    <stat Name="Willpower" sValue="6,1d2,(t-1)d2-1" />
+    <stat Name="Ego" sValue="8,1d2,(t-1)d2-1" />
+    <inventoryobject Blueprint="Woven Tunic" Number="1" />
+    <part Name="NoKnockdown" />
+    <tag Name="Class" Value="worm" />
+    <tag Name="Species" Value="worm" />
+    <tag Name="Pet" />
+    <tag Name="StartingPet" />
+    <part Name="Pettable" />
+    <tag Name="PetResponse" Value="squishes,deforms to the shape of your appendage,groans in appreciation,makes a hideous gurgling sound,sways in place,undulates from within" />
+    <tag Name="Gender" Value="nonspecific" />
+    <xtagGrammar Proper="true" />
+    <property Name="Story" Value="Freehold_Pet_Herman_Story" />
+    <tag Name="DeathSounds" Value="Sounds/Creatures/VO/sfx_creature_animal_worm_vo_die" />
+    <tag Name="TakeDamageSound" Value="Sounds/Creatures/VO/sfx_creature_animal_worm_vo_hurt"/>
+    <tag Name="AmbientIdleSound" Value="Sounds/Creatures/VO/sfx_creature_animal_worm_vo_idle"/>
+    <tag Name="PunchSound" Value="Sounds/Creatures/VO/sfx_creature_animal_worm_vo_attack"/>
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+</objects>

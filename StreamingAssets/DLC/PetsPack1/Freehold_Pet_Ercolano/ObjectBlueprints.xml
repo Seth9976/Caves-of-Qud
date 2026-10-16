@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Ercolano" Inherits="BaseChair">
+    <part Name="Render" DisplayName="&amp;MErcolano" Tile="Items/sw_chair_rocking.bmp" ColorString="&amp;w" DetailColor="y" />
+    <part Name="Description" Short="Spiral-grained wood was coopered into the Sublime Angle by a secret carver in three places: the headrest and two rockers. A small inscription on the oblong splat avers the wood was stolen from an emir's palace grove in the Hanging Hills and smuggled across the Homs Delta. There, this mysterious stranger worked a simple beauty out of the wood. But what other workbench sorcery was performed? The chair rocks of its own accord, and its tight friction squeals are a bride language to those who listen."></part>
+    <tag Name="BodyType" Value="RockingChair" />
+    <builder Name="Animated" ChanceOneIn="1" />
+    <part Name="ConversationScript" ConversationID="Ercolano" />
+    <stat Name="Level" Value="1"></stat>
+    <stat Name="AV" Value="8"></stat>
+    <stat Name="Hitpoints" Value="300"></stat>
+    <tag Name="PetResponse" Value="rocks gently" />
+    <part Name="Pettable" />
+    <tag Name="Pet" />
+    <tag Name="StartingPet" />
+    <part Name="Preacher" Book="ErcolanoSitSayings" Prefix="Ercolano says, &amp;W" Frozen="Ercolano mumbles inaudibly, encased in ice." inOrder="false" ChatWait="20"></part>
+    <part Name="PreachOnSit" />
+    <inventoryobject Blueprint="Quilted Shawl" />
+    <inventoryobject Blueprint="Crowfeather Pillow" />
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <property Name="Story" Value="Freehold_Pet_Ercolano_Story" />
+    <tag Name="AnimatedInventoryPopulationTable" Value="ErcolanoInventory"/>
+    <tag Name="Gender" Value="nonspecific" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="NoCombat"></tag>
+    <tag Name="NoAnimatedNamePrefix"></tag>
+  </object>
+  <object Name="Crowfeather Pillow" Inherits="BaseArmor">
+    <part Name="Armor" AV="0" DV="0" Heat="10" Cold="10" WornOn="Body"></part>
+    <part Name="Render" DisplayName="&amp;mcrowfeather&amp;y pillow" RenderString="]" Tile="items/sw_cushion1.bmp" ColorString="&amp;Y" DetailColor="y"></part>
+    <part Name="Commerce" Value="4"></part>
+    <part Name="Description" Short="Soft, down glowcrow feathers were stuffed into a knit sheet."></part>
+    <part Name="Physics" Weight="1" Organic="true" Category="Clothes"></part>
+    <tag Name="Tier" Value="1"></tag>
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+</objects>

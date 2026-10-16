@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Iopinax" Inherits="BaseAnimal">
+    <part Name="Render" DisplayName="&amp;MIopinax the Younger" Tile="Creatures/sw_iopinax.bmp" RenderString="g" ColorString="&amp;w" DetailColor="y" />
+    <part Name="Description" Short="Under a coat of curly fur, dappled skin dents -- dodecagons -- catch the filtered brightness of the wide world and thrash it back against itself twelve times, and then breathe out a soft glow. It lights the beards of the three thin necks, each craning a head to inspect the others and acting as a lever for its set of hooking horns. The god-goat is mute and severe." />
+    <part Name="Corpse" CorpseChance="0" CorpseBlueprint="Goat Corpse" />
+    <part Name="Brain" Wanders="false" />
+    <stat Name="Level" Value="4" />
+    <stat Name="AV" Value="15" />
+    <stat Name="Hitpoints" Value="30" />
+    <stat Name="Strength" sValue="18"></stat>
+    <stat Name="Agility" sValue="22"></stat>
+    <stat Name="Toughness" sValue="16"></stat>
+    <stat Name="HeatResistance" Value="80" />
+    <stat Name="ColdResistance" Value="80" />
+    <stat Name="AcidResistance" Value="80" />
+    <stat Name="ElectricResistance" Value="80"></stat>
+    <part Name="LightSource" Lit="true" Radius="3" />
+    <part Name="RefractLight" />
+    <inventoryobject Blueprint="Rock-Scarred Hoof" Number="2" />
+    <inventoryobject Blueprint="Goat_Horns" Number="1" />
+    <skill Name="Cudgel" />
+    <skill Name="Cudgel_ChargingStrike" />
+    <skill Name="Multiweapon_Fighting" />
+    <skill Name="Tactics_Charge" />
+    <skill Name="Endurance" />
+    <skill Name="Shield" />
+    <part Name="InhabitAchievement" AchievementID="ACH_INHABIT_GOAT" />
+    <part Name="ConversationScript" ConversationID="Goats" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <part Name="Pettable" />
+    <tag Name="PetResponse" Value="bleats a cascade of soft tones,baaas a soft meadow's breeze of sound,bleats a joyful noise unto the world,baaas soothingly" />
+    <tag Name="Gender" Value="male" />
+    <tag Name="Species" Value="goat" />
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <property Name="Story" Value="Freehold_Pet_Iopinax_Story" />
+  </object>
+  <object Name="Rock-Scarred Hoof" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="rock-scarred hoof" Tile="Creatures/natural-weapon-hoof1.bmp" ColorString="&amp;w"></part>
+    <part Name="MeleeWeapon" PenBonus="0" HitBonus="0" BaseDamage="2d2" Skill="Cudgel" Stat="Strength" Slot="Foot" />
+    <tag Name="UndesireableWeapon"/>
+  </object>
+</objects>

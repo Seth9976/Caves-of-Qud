@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Gloaming" Inherits="BaseBird">
+    <part Name="Render" DisplayName="{{M|Gloaming}}" Tile="creatures/sw_bird_owl.bmp" RenderString="b" ColorString="&amp;K" DetailColor="y" />
+    <part Name="Description" Short="Two wide eyes open like bright-shored lochs of a different realm. The mere act of looking traps your own eye in their currents, and you're dragged through a procession of spectral forms and drowned in their black waters before rising to the surface of your familiar, buoyant world. Now the smooth and feathered bird is visible to you, lit from behind by a distant gleam. As =pronouns.subjective= flap the shadows off =pronouns.possessive= wings, they appear to take on the shape of something else." />
+    <mutation Name="Wings" Level="10" />
+    <stat Name="Level" Value="99" />
+    <part Name="ConversationScript" ConversationID="Gloaming" />
+    <part Name="PetGloaming" />
+    <tag Name="Pet" />
+    <tag Name="StartingPet" />
+    <part Name="Pettable" />
+    <part Name="AITryKeepDistance" />
+    <tag Name="PetResponse" Value="hoots" />
+    <property Name="Story" Value="Freehold_Pet_Gloaming_Story" />
+    <part Name="CannotBeInfluenced" Messages="default:=subject.The==subject.name= =verb:are= insensible to your blandishments." />
+    <part Name="NoDamage" />
+    <tag Name="Nullphase" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="NoXP" />
+		<tag Name="NoCombat" />
+    <tag Name="Gender" Value="nonspecific" />
+    <xtagGrammar Proper="true" />
+  </object>
+</objects>

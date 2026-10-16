@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+<conversation ID="Gloaming">
+  <node ID="Start">
+    <text>&amp;w*hoot* *hoot*&amp;y
+
+=WEIRDMARKOVSENTENCE=
+
+&amp;w*hoot*&amp;y
+    </text>
+    <choice GotoID="End">...</choice>
+  </node>
+</conversation>
+</conversations>

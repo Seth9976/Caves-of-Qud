@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Uthabatafah" Inherits="BaseAnimal">
+    <part Name="Render" DisplayName="&amp;MUthabatafah" Tile="Creatures/sw_tiny_rhinox.bmp" RenderString="L" ColorString="&amp;y" DetailColor="Y" />    
+    <part Name="Brain" Wanders="false" Hostile="True"></part>
+    <stat Name="Level" Value="6"></stat>
+    <stat Name="Strength" sValue="10"></stat>
+    <stat Name="Agility" sValue="16"></stat>
+    <stat Name="Toughness" sValue="17"></stat>
+    <stat Name="Intelligence" sValue="8"></stat>
+    <stat Name="Willpower" sValue="10"></stat>
+    <stat Name="Ego" sValue="10"></stat>
+    <stat Name="AV" Value="4"></stat>
+    <stat Name="Hitpoints" Value="25"></stat>
+    <stat Name="HeatResistance" Value="20"></stat>
+    <stat Name="ColdResistance" Value="20"></stat>
+    <stat Name="AcidResistance" Value="20"></stat>
+    <stat Name="ElectricResistance" Value="20"></stat>
+    <inventoryobject Blueprint="Tiny Rhinox Hoof" Number="2"></inventoryobject>
+    <part Name="Description" Short="Little hooves pat the ground in practiced fury, and three little horns arch toward the sky in menacing miniature. Into the slate-scale skin of his diminutive body is a labyrinth of scar-etched filigree, and while it looks as though it could be the work of a meticulous gemcutter, in fact it's the aftermath of a hundred skirmishes and a gratuitous reduction in size. There, the tiny spirals that were incised by the puma's claw just before it was gored and dashed against the trunk of a diacalyptus tree. There, the miniscule triangle of a warden's pike, who was flattened into a bloody mess and fed to worms. A fate-wrench took Uthabatafah's beastly dominion from him, but might it have gifted him something in return? Through the feckless fury, how might being in the world on a new scale bind him to others in ways he couldn't have imagined before?"></part>
+    <skill Name="Cudgel"></skill>
+    <skill Name="Cudgel_ChargingStrike"></skill>    
+    <skill Name="Multiweapon_Fighting"></skill>
+    <skill Name="Tactics"></skill>
+    <property Name="Role" Value="Tank"></property>
+    <mutation Name="MultiHorns" Level="1"></mutation>
+    <tag Name="HasLittleHorns"/>
+    <part Name="ConversationScript" ConversationID="Uthabatafah"></part>
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <part Name="Pettable" />
+    <tag Name="SpecialPetResponse" Value="&amp;MUthabatafah&amp;y's fury subsides, and he nuzzles up against you." />
+    <tag Name="PetResponse" Value="nuzzles you" />    
+    <tag Name="Gender" Value="male" />
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"></tag>    
+    <property Name="Story" Value="Freehold_Pet_Uthabatafah_Story" />
+  </object>
+  <object Name="Tiny Rhinox Hoof" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="little hoof"></part>
+    <part Name="MeleeWeapon" PenBonus="0" HitBonus="0" MaxStrengthBonus="10" BaseDamage="1d2" Skill="Cudgel" Stat="Strength" Slot="Foot"></part>
+    <tag Name="UndesireableWeapon"/>
+  </object>
+</objects>

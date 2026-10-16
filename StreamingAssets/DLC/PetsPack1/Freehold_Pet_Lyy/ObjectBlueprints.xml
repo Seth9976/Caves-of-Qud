@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Lyy" Inherits="BaseReptile">
+    <part Name="Render" DisplayName="&amp;MLyy" Tile="Creatures/sw_lyy.bmp" RenderString="f" ColorString="&amp;G" DetailColor="W" />
+    <part Name="Description" Short="Damp pistachio skin heaves around his tiny nares like miniature foothills caught in flood. He's perched on his twiggy shanks comfortably, and his star-bright eyes watch the wide world. The floor about him is wet with the inky prints of webbed feet; the dotted baby has erupted out of the realm of the imaginary."></part>
+    <part Name="ConversationScript" ConversationID="Lyy" />
+    <stat Name="Level" Value="1"></stat>
+    <stat Name="AV" Value="2"></stat>
+    <stat Name="Agility" sValue="28"></stat>
+    <stat Name="Hitpoints" Value="50"></stat>
+    <part Name="Preacher" Book="LyyRibbits" Prefix="Lyy croaks, &amp;W" Frozen="Lyy ribbits inaudibly, encased in ice." inOrder="false" ChatWait="600"></part>
+    <part Name="LeaksFluid" Liquid="ink" Drams="1-2" Frequency="1000-4000" MessageVerb="secrete" />
+    <tag Name="PetResponse" Value="croaks" />
+    <part Name="Pettable" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <tag Name="Gender" Value="male" />
+    <property Name="Story" Value="Freehold_Pet_Lyy_Story" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="NoCombat"></tag>
+  </object>
+</objects>

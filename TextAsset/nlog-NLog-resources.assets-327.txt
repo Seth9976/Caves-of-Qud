@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nlog>
+  <targets>
+    <target name="BuildLog" type="File" fileName="build_log.txt" layout="${message} " archiveOldFileOnStartup="True" maxArchiveFiles="3" />
+    <target name="GameLog" type="File" fileName="game_log.txt" layout="${message} " archiveOldFileOnStartup="True" maxArchiveFiles="3" />
+    <target name="UnityConsole" type="UnityConsole" layout="&lt;color=#AAAAAA&gt;[${level}] ${message}&lt;/color&gt;${newline}&lt;color=orange&gt;${callsite}&lt;/color&gt;${newline}&lt;color=red&gt;${exception}&lt;/color&gt;" />
+    <target name="UnityConsoleError" type="UnityConsole" layout="&lt;color=red&gt;[${level}] ${message}&lt;/color&gt;${newline}&lt;color=orange&gt;${callsite}&lt;/color&gt;${newline}&lt;color=red&gt;${exception}&lt;/color&gt;" />
+    <target name="UnityConsoleDebug" type="UnityConsole" layout="&lt;color=#666666&gt;[${level}] ${message}&lt;/color&gt;${newline}&lt;color=orange&gt;${message}&lt;/color&gt;${newline}&lt;color=red&gt;${exception}&lt;/color&gt;" />
+    <target name="UnityConsoleWarning" type="UnityConsole" layout="&lt;color=orange&gt;[${level}] ${message}&lt;/color&gt;${newline}&lt;color=orange&gt;${callsite}&lt;/color&gt;${newline}&lt;color=red&gt;${exception}&lt;/color&gt;" />
+    <target name="TraceLog" type="File" fileName="trace_log.txt" />
+  </targets>
+  <rules>
+    <logger name="TraceLog" target="TraceLog" namespace="*" platforms="OSXEditor, WindowsEditor, LinuxEditor" final="True" />
+    <logger name="BuildLog" namespace="*" target="BuildLog" />
+    <logger name="GameLog" target="GameLog" namespace="*" levels="Assert, Fatal, Error, Warn, Info" />
+    <logger name="GameLog" target="GameLog" levels="Debug, Trace" namespace="*" platforms="OSXEditor, WindowsEditor, LinuxEditor" />
+    <logger name="*" target="UnityConsoleError" levels="Assert, Fatal, Error" namespace="*" />
+    <logger name="*" target="UnityConsoleDebug" levels="Debug, Trace" namespace="*" platforms="OSXEditor, WindowsEditor, LinuxEditor" />
+    <logger name="*" target="UnityConsoleWarning" levels="Warn" namespace="*" />
+    <logger name="*" target="UnityConsole" namespace="*" levels="Info" />
+  </rules>
+</nlog>

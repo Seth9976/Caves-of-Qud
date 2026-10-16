@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Esbear" Inherits="BaseHumanoid">
+    <part Name="Render" DisplayName="&amp;MEsbear" Tile="creatures/sw_esbear.bmp" RenderString="b" ColorString="&amp;r" TileColor="&amp;Y" DetailColor="r"/>
+    <part Name="Description" Short="Though bipedal and clad in robe and sandal, this is no Urshiib. With no quills or technical expertise to speak of, this ursine companion's talents lie in =pronouns.possessive= inexplicable force of ego. Power shines behind =pronouns.possessive= eyes, albeit in the absence of substantial intellect." />
+    <part Name="Corpse" CorpseChance="0" CorpseBlueprint="Bear Corpse" />
+    <part Name="Brain" Wanders="false"/>
+    <property Name="Role" Value="Skirmisher" />
+    <mutation Name="SunderMind" Level="1"></mutation>
+    <mutation Name="MentalMirror" Level="1"></mutation>
+    <part Name="RandomMutations" Mental="1" MentalLevel="1" />
+    <stat Name="Level" Value="3" />
+    <stat Name="AV" Value="4" />
+    <stat Name="Hitpoints" Value="60" />
+    <stat Name="Strength" sValue="18" />
+    <stat Name="Toughness" sValue="20" />
+    <stat Name="Willpower" sValue="20" />
+    <stat Name="Ego" sValue="16" />
+    <stat Name="Agility" sValue="16" />
+    <stat Name="Intelligence" sValue="10" />
+    <stat Name="HeatResistance" Value="10" />
+    <stat Name="ColdResistance" Value="10" />
+    <part Name="ConversationScript" ConversationID="Esbear" />
+    <inventoryobject Blueprint="Sandals" />
+    <inventoryobject Blueprint="Cloth Robe" />		
+    <tag Name="PetResponse" Value="pets you back,hums,sneezes,yawns,falls briefly asleep,snuffles your arm,rests a paw gently upon your face" />
+    <part Name="Pettable" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet" />
+    <property Name="Story" Value="Freehold_Pet_Esbear_Story" />
+    <tag Name="NoXP"></tag>
+    <tag Name="Gender" Value="male" />		
+    <xtagGrammar Proper="true" />
+		<tag Name="Species" Value="bear" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+</objects>

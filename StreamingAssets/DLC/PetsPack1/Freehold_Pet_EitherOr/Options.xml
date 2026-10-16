@@ -1,0 +1,4 @@
+<options>
+    <option ID="OptionDLC1IncludeEitherRandomly" DisplayText="Include either / or in dynamic encounters, even when you didn't select them as your starting pet (restart required)" Category="Pets" Type="Checkbox" Default="No">
+    </option>
+</options>

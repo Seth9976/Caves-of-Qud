@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Esbear">
+    <node ID="Start">
+      <text>
+        Oh. Yes, hello.~
+        Oh.~
+        Hmm? Oh. Hello there friend.~
+        I am thinking about starapples.~
+        I am considering meat.~
+        I am pondering honey.~
+        I do so love apple matz.~
+        Perhaps I would like. A bowl of The Porridge.~
+        Spiced cider. Would hit the spot. Would it not?~
+        Mah lah soup. With extra matz. I would like this please.~
+        When next we camp. It might be nice to have apples and honey. What do you think?~
+        Have you met the bear? Who lives in still water? It is terribly shy. But seems friendly enough.~
+        I think my least favorite thing. Is when a worm gets in your ear.~
+        Ptoh! ... Oh! Sorry. I ate a leaf. And had to spit it out.~
+        Do you ever just. Want to go? East and South?~
+        For all of the intricacies of the mind. Who can resist? A delicious meal?~
+        It has been a while since our last meal, no?~
+        I do not like. To bite anyone. I am a seeker? Of the biteless way.
+        It is nice to journey, but it is also nice to rest.~
+        The truth is, I only relieve myself in the woods if I am in the woods. I am not always in the woods.~
+        Most espers I meet are terribly unfriendly. It is a shame. We could share water, and honey, and all would be well.~
+        I once traveled over a mountain. Believing I would see something. That I had not seen before. Once past the summit. I was disappointed to find. That the other side? Of the mountain? Bore a striking resemblance. To the one I'd just left. What is the purpose of mountains?
+      </text>
+      <choice GotoID="End">Live and drink, Esbear.</choice>
+    </node>
+  </conversation>
+</conversations>

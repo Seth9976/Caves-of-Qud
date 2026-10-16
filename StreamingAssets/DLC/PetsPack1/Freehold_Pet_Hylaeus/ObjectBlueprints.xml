@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Hylaeus" Inherits="BaseDog">
+    <part Name="Render" DisplayName="&amp;MHylaeus" Tile="creatures/sw_dog_shaggy.bmp" ColorString="&amp;Y" DetailColor="C" />
+    <part Name="Description" Short="The wilds have matted =pronouns.possessive= layers of softest snow fur into a heath-brushed tundra. A wide snout =pronouns.subjective= =verb:bear:afterpronoun= for scooping out the rain-damp loam, and a staunch tail for vigorous wagging. =pronouns.Subjective= =verb:pant:afterpronoun= and =verb:eep:afterpronoun= in awakened appreciation of a companion worth a damn."></part>
+    <part Name="Brain" MinKillRadius="2" MaxKillRadius="2"></part>
+    <stat Name="Level" Value="4"></stat>
+    <stat Name="AV" Value="3"></stat>
+    <stat Name="Hitpoints" Value="35"></stat>
+    <stat Name="Strength" Boost="1" />
+    <stat Name="Agility" Boost="1" />
+    <stat Name="Toughness" Boost="1" />
+    <stat Name="Intelligence" sValue="18"></stat>
+    <stat Name="Willpower" sValue="20"></stat>
+    <stat Name="Ego" Boost="1" />
+    <mutation Name="ThickFur"></mutation>
+    <skill Name="Tinkering_Scavenger" />
+    <skill Name="Endurance_Longstrider" />
+    <skill Name="Survival_SaltDesertSurvival" />
+    <inventoryobject Blueprint="Dog_Bite" Number="1"></inventoryobject>
+    <tag Name="PetResponse" Value="barks,licks you,nuzzles you,puts his snout in your lap,whines,pants,growls" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <tag Name="Gender" Value="male" />
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <property Name="Story" Value="Freehold_Pet_Hylaeus_Story" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <part Name="Fetches"></part>
+  </object> 
+</objects>

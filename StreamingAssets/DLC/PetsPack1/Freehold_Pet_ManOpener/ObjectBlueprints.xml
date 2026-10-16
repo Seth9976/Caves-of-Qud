@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Man Opener" Inherits="BaseInsect">
+    <part Name="Render" DisplayName="&amp;MMan Opener" Tile="creatures/sw_man_opener.bmp" RenderString="I" ColorString="&amp;w" DetailColor="W"></part>
+    <part Name="Corpse" CorpseChance="0" />
+    <stat Name="Level" Value="2" />
+    <stat Name="AV" Value="5" />
+    <stat Name="Hitpoints" Value="50" />
+    <stat Name="Ego" sValue="12" />
+    <stat Name="Agility" sValue="12" />
+    <stat Name="Intelligence" sValue="12" />
+    <part Name="Brain" Hostile="false" Wanders="true" Hibernating="false" Factions="Prey-100,Insects-25" />
+    <part Name="Description" Short="Though nearly extinct now, for a few short decades the pit beetle was a must-have accessory for any bandit fort or murder cave. Sporting a pair of articulated horns, a determined pit beetle excels at its favorite activity: peeling away armor and feasting on the contents. As violently loyal as =pronouns.subjective= =verb:are:afterpronoun= affectionate, Man Opener is a paragon of =pronouns.possessive= kind. =pronouns.Subjective= =verb:wander:afterpronoun= Qud in search of a new keeper, or at least a friend." />
+    <part Name="ConversationScript" ConversationID="ManOpener" />
+    <skill Name="Axe_Expertise" />
+    <skill Name="Axe_Cleave" />
+    <skill Name="Axe_Dismember" />
+    <inventoryobject Blueprint="ManOpenersManOpeners" />
+    <property Name="Story" Value="Freehold_Pet_ManOpener_Story" />
+    <property Name="Role" Value="Brute" />
+    <tag Name="PetResponse" Value="pushes her head against your hand,gives you an affectionate croak,nuzzles your side,prances in place,turns in a happy circle,chitters happily,gives you a playful shove,croaks for more" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <tag Name="Gender" Value="female" />
+    <xtagGrammar Proper="true" />
+    <tag Name="Species" Value="beetle" />
+    <part Name="Pettable" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+
+  <object Name="ManOpenersManOpeners" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="man openers" />
+    <part Name="MeleeWeapon" Slot="Face" MaxStrengthBonus="9999" BaseDamage="2d2" Skill="Axe" />
+    <tag Name="Gender" Value="plural" />
+  </object>
+</objects>

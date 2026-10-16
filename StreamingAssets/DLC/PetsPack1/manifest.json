@@ -1,0 +1,10 @@
+{
+    "id": "FreeholdGames_DLC_PetsPack1",
+    "loadOrder": 1,
+    "title": "Pets of Harvest Dawn",
+    "description": "Adds 13 pets to Caves of Qud.",
+    "version": "1.0.0",
+    "author": "{{W|Freehold Games}}",
+    "tags": "DLC Pets",
+    "previewImage": "petspack1logo.png"
+}

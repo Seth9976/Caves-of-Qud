@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Ebenshabat">
+    <node ID="Start">
+      <text>
+        HAH, FRIEND!
+      </text>
+      <choice GotoID="Muse">Ebenshabat, muse for me.</choice>
+      <choice GotoID="Fight">Friend, do you not engage in combat?</choice>
+      <choice GotoID="Recipe">Would you teach a new recipe to cook?</choice>      
+      <choice GotoID="End">Sweet parting, friend.</choice>
+    </node>
+    <node ID="Muse">
+      <text>
+        IS THERE ANOTHER SPINDLE, FRIEND, OF A REVERSED POLARITY? ONE THAT BORES TO THE CENTER OF THE WORLD INSTEAD OF UP INTO THE WIDE SKY?~
+        THINK OF A CRAB, FRIEND. OH? DO NO MORE THAN THAT. THINK OF A CRAB.~
+        THERE ARE SO MANY CIRCLES, FRIEND, RINGED IN AND OUT OF EACH OTHER. MY MIND, MY BODY AND THE TINY CREATURES THAT LIVE IN ITS CRACKS, MY FRIENDS, MY POISONED JUNGLE HOME. MY PLANET. THEIR PERIMETERS ARE UNSTABLE, FRIEND.~
+        IS JUICE A KIND A SOUP?~
+        I'M IN WONDERMENT AT THE IDEA OF 'UNSPEAKING'. INSTEAD OF BIRTHING A WORD UNTO THE WORLD, I GOBBLE IT OUT OF OTHERS' MOUTHS AND TRAP IT FOREVER.~
+        THERE, FRIEND! A GLOWCROW! HAH HAH HAH! WHAT IF IT WERE TRUE?~
+        WHAT A STRANGE PURSUIT IS THE PURSUIT OF KNOWLEDGE! I INSIST ON SITTING BENEATH THE SAME STARAPPLE TREE, BUT I REFUSE TO THINK THE SAME THOUGHTS WHILE SITTING THERE!~
+        A GREYBEARD ONCE TOLD ME THAT OUR REALITY IS REAL ONLY AS THE APPROXIMATION OF A CLOUD OF FICTIVE REALITIES. HAH!~
+        THE MUNCHING OF A STARAPPLE, IF YOU CLOSE YOUR EYES, SOUNDS JUST LIKE THE CRUSHING OF LEAVES ON A JUNGLE PATH. IF YOU CONCENTRATE JUST SO, THE TWO EXPERIENCES ARE ONE.~
+        YOUR MIND IS GROWN FROM YOUR BRAIN LIKE A FRACTUS FROM ITS ROOTS, FRIEND.~
+        DO YOU WONDER, FRIEND, WHETHER YOUR WILL IS AN ILLUSION, PERHAPS THE ESCAPIST FANTASY OF A DETERMINISTIC SYSTEM?~
+        ARE WE WHO THE EATERS DREAMED?~
+        I ONCE READ OF A BEING WHO GREW A FRIEND FROM HIS BACK. HAH HAH!~
+        WHAT TENDER GIFTS WOULD YOU GIVE YOURSELF IF YOU SPLIT IN TWO?~
+        THE SHADOWS ARE LONG, FRIEND, AND THE WORLD IS STILL.~
+        I DO ENJOY OUR CONVERSATIONS, FRIEND!~
+        SOMETIMES I PRETEND TO TALLY EVERY SNAPJAW TO HAVE EVER LIVED. COULD YOU FIT THAT NUMBER IN YOUR HEAD? YOUR HEART?~
+        SLOW DOWN AND RUN YOUR FINGERS OVER THE MARBLE, FRIEND.~
+        ONCE I HEARD HILLS DESCRIBED AS BLIPS IN THE WAVE GRAPH OF STONE OVER TIME.~
+        WHAT SHALL WE CALL THE COLLECTION OF THINGS THAT MUST BE EVER BORN IN THE MINDS OF THE YOUNG?
+      </text>
+      <choice GotoID="Muse">Muse more, friend.</choice>
+      <choice GotoID="Fight">Friend, do you not engage in combat?</choice>
+      <choice GotoID="Recipe">Would you teach a new recipe to cook?</choice>
+      <choice GotoID="End">Sweet parting, friend.</choice>
+    </node>
+    <node ID="Recipe">
+      <text>
+        HAH HAH HAH, FRIEND! YOU MUST WAIT FOR THE FRUIT TO RIPEN.
+      </text>
+      <choice GotoID="Muse">Ebenshabat, muse for me.</choice>
+      <choice GotoID="Fight">Friend, do you not engage in combat?</choice>
+      <choice GotoID="End">Sweet parting, friend.</choice>
+    </node>
+    <node ID="Fight">
+      <text>
+        I DO NOT, FRIEND!
+      </text>
+      <choice GotoID="Muse">Ebenshabat, muse for me.</choice>
+      <choice GotoID="Recipe">Would you teach a new recipe to cook?</choice>
+      <choice GotoID="End">Sweet parting, friend.</choice>
+    </node>
+  </conversation>
+</conversations>

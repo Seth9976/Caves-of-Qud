@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Uthabatafah">
+    <node ID="Start">
+      <text>
+Nff nff nff.~
+Nff nff.~
+&amp;RNnnnnnnnnrgh!!!&amp;Y~
+Nff.~
+Hnnnnnh.~
+Hnnh.~
+&amp;RHNNNNNNNNNNNNNNNNNNNNNNNNNHHH!&amp;Y~
+&amp;RHNNNNH! HNNNNH! HNNNNH!!!&amp;Y~
+Nffbwaaaaaaaa hnnnnnh.~
+Nffbwaaaaa hnnnnnh bwaaaaaaaa hnnnnh.~
+Nffffffff.~
+Nffffff &amp;RNNNNRRRRGGGGGG!!!!&amp;Y
+      </text>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+  </conversation>
+</conversations>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Frondzie" Inherits="MutatedVine">
+    <part Name="Render" DisplayName="&amp;MFrondzie" Tile="creatures/sw_pet_vine.bmp" ColorString="&amp;g" DetailColor="G" />
+    <part Name="Description" Short="Shuffling along on countless little fronds like a smarmy caterpillar, this vine sidles along =pronouns.possessive= way, eternally seeking a worthy audience for =pronouns.possessive= slippery wit."></part>
+    <part Name="ConversationScript" ConversationID="Frondzie" />
+    <stat Name="Level" Value="2"></stat>
+    <stat Name="AV" Value="4"></stat>
+    <stat Name="Hitpoints" Value="90"></stat>
+    <stat Name="HeatResistance" Value="10" />
+    <stat Name="ColdResistance" Value="10" />
+    <stat Name="AcidResistance" Value="10" />
+    <stat Name="ElectricResistance" Value="10" />
+    <part Name="PetFrondzie"></part>
+    <part Name="Pettable" />    
+    <tag Name="SpecialPetResponse" Value="&amp;MFrondzie&amp;y says, 'Yowza! That was the pet of the month!'" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <tag Name="PronounSet" Value="xe/xem/xyr" />
+    <property Name="Story" Value="Freehold_Pet_Frondzie_Story" />
+    <inventoryobject Blueprint="Slap Stick" Number="2"></inventoryobject>
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+  <object Name="Slap Stick" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="slap stick" />
+    <part Name="Description" Short="This long, sharp frond has been adapted to take over where diplomacy leaves off." />
+    <part Name="MeleeWeapon" PenBonus="0" BaseDamage="1d4" Skill="LongBlades" Stat="Strength" Slot="Hand" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+</objects>

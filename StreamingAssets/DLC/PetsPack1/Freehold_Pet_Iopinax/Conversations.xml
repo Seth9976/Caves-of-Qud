@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Lyy">
+    <node ID="Start">
+      <text>
+        &amp;w*croak*&amp;y~
+        &amp;w*croak*!&amp;y~
+        &amp;w*ribbit*&amp;y~
+        &amp;w*ribbit!*&amp;y~
+        &amp;w*croak*&amp;y~
+        &amp;w*croak*!&amp;y~
+        &amp;w*ribbit*&amp;y~
+        &amp;w*ribbit!*&amp;y~
+        &amp;w*croak*&amp;y~
+        &amp;w*croak*!&amp;y~
+        &amp;w*ribbit*&amp;y~
+        &amp;w*ribbit!*&amp;y~
+        &amp;w*croak*&amp;y~
+        &amp;w*croak*!&amp;y~
+        &amp;w*ribbit*&amp;y~
+        &amp;w*ribbit!*&amp;y~
+        &amp;w*quetzal*&amp;y
+      </text>
+      <choice GotoID="End">...</choice>
+    </node>
+  </conversation>
+</conversations>

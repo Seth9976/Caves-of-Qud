@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Frondzie">
+    <node ID="Start">
+      <text>
+        Got any headscarves in that pack? I am sworn to carry your turbans.~
+        Hey boss, can I be party leader? Do it for the vine!~
+        Tough crowd, huh? Maybe the next complete strangers will like my jokes better.~
+        Hey wayfarer, how ya wayfaring?~
+        Patrolling the Moghra'yi almost makes ya wish for a real severe winter!~
+        I'm gonna be one of the all-time classic vines, just you wait.~
+        Hey boss, we should go see if another settlement needs our help! My routine needs more material.~
+        Aw, c'mon, let's shake a leg! Or whatever you've got going on down there, I forget.~
+        When I tell a joke, the crowds come running! Then there's bludgeoning, usually.~
+        Voider? I hardly know 'er!~
+        Think we could convince the Putus Templar that the blood of the reclaimed is whatever that stuff is at the bottom of Golgotha? More like 'Warmonger Amongst the Goo' am I right?~
+        Ayyy.
+      </text>
+      <choice GotoID="Joke">Tell me a joke, Frondzie.</choice>
+      <choice GotoID="End">Live and drink, funny vine.</choice>
+    </node>
+
+    <node ID="Joke">
+      <text>
+        Jokes I can do! I'm more of a joker than a phyta.~
+        If I told jokes without words, would that be plantomime?~
+        I ran through the Canticles Chromaic last night, and boy, are my fronds tired!~
+        I took a weird artifact for some urshiib to look at, but it really Bara-threw-em for a loop.~
+        I hear the garbage water in Golgotha is a bit of an acquired taste, but who am I to sludge?~
+        I'd go to the Moghra'yi myself, but Issachari place.~
+        If a bigwig goes broke, they're water-barren.~
+        What's black and white and red all over? A slumberling after you poke it!~
+        What's the difference between the Putus Templar and the Girsh? One is an evil slavering hivemind sent to Qud as disproportionate punishment for our unknowing sins, and the other is the Girsh! Ayy!~
+        I fell in love with a sign, once. That was a breakup I knew was coming: I could see the writing on the wall.~
+        If a Fellowship member makes a house out of goatfolk hide, they're a yurtwarden yurt warden. If they use it as a base in an ongoing conflict with another yurt-dweller, that's a yurtwarden yurt warden yurt war den.~
+        My mother was complaining to me about how rude the Mechanimists are. I said ma! There's no use crying over stilt ilk!~
+        Never start a fight with a Stilt Warden. Talk about being crushed under the weight of a million stuns.~
+        What's the best thing about the Putus Templar? Selling their gear!~
+        I don't understand why my friends don't like Pax Klanq. He's a fun guy!
+      </text>
+      <choice GotoID="Joke">Let's have another one!</choice>
+      <choice GotoID="Repeat">You've already told me that one.</choice>
+      <choice GotoID="End">I think I've had enough. Live and drink.</choice>
+    </node>
+
+    <node ID="Repeat">
+      <text>
+        Nah, it's slightly different from last time. I'm workshopping it.~
+        You want I should procedurally generate each one?~
+        I figure it'll get funnier the more you hear it.~
+        So? You never eat the same meal twice? I'm assuming that's weird. I don't eat food. I'm a plant.~
+        That'll just make you extra happy when I finally get some new material!~
+        Aw, I was hoping you'd forget.
+      </text>
+      <choice GotoID="Joke">Okay, tell me another one.</choice>
+      <choice GotoID="End">Live and drink, funny vine.</choice>
+    </node>
+  </conversation>
+</conversations>

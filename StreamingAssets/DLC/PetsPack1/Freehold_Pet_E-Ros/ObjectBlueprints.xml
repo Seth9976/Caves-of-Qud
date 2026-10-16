@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="E-Ros" Inherits="BaseRobot">
+    <part Name="Render" DisplayName="&amp;ME-Ros" Tile="creatures/sw_eros.bmp" ColorString="&amp;c" DetailColor="R" />
+    <part Name="Description" Short="Antennae splay from =pronouns.possessive= broad stannic face at just the right angle to form the 'love frustum' -- a shape phenomenologically proven to arouse the spirit into filling the body -- and =pronouns.possessive= expression is an atlas of grooves that reads as dumb desire."></part>
+    <part Name="ConversationScript" ConversationID="E-Ros" />
+    <stat Name="Level" Value="3"></stat>
+    <stat Name="AV" Value="4"></stat>
+    <stat Name="Willpower" sValue="14"></stat>
+    <stat Name="Agility" sValue="16"></stat>
+    <stat Name="Hitpoints" Value="50"></stat>
+    <part Name="Fetches" SniffMessage="=subject.The==subject.name= &amp;y=verb:scan= the area for gifts." FetchMessage="=subject.The==subject.name= &amp;y=verb:dart= off to grab "></part>
+    <part Name="Preacher" Book="ERosProclamations" Prefix="E-Ros says, &amp;W" Postfix="" Frozen="E-Ros mumbles inaudibly, encased in ice." inOrder="false" ChatWait="20"></part>
+    <part Name="PreachOnPartyCombat"></part>
+    <mutation Name="ForceWall" Level="6" />
+    <mutation Name="ErosTeleportation" Level="5"></mutation>
+    <inventoryobject Blueprint="E-Ros_LoveCudgel" Number="2"></inventoryobject>
+    <part Name="Pettable" />
+    <tag Name="PetResponse" Value="beams in delight" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <property Name="Story" Value="Freehold_Pet_E-Ros_Story" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+  <object Name="E-Ros_LoveCudgel" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" BaseDamage="1d2" Skill="Cudgel" Stat="Strength" Slot="Hand" />
+    <part Name="Render" DisplayName="&amp;Rlove&amp;c cudgel" />
+    <part Name="Metal" />
+  </object>
+</objects>

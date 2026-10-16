@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Freehold_Pet_Herman">
+    <node ID="Start">
+      <text>
+Auuhhh, live and drink.~
+Urrhh. Not bulging? No? Good. ~
+Ahh, it is a fine day to be unaware of one's internal organs.~
+{{emote|*Herman squelches grotesquely.*}}~
+Ulllllq.~
+I breathe instinctively. Hhhhhh. I don't even have to think about it.~
+Gurrrh. It is good we travel together. ~
+What a piece of work is man! Hggggh.
+      </text>
+      <choice GotoID="Greeting">Moon and Sun, Herman.</choice>
+      <choice GotoID="What">Herman, what manner of creature are you?</choice>
+      <choice GotoID="Human">Meditate on the human condition with me, Herman.</choice>
+      <choice GotoID="End">Live and drink, Herman.</choice>
+    </node>
+    <node ID="Greeting" Inherits="Start">
+      <text>
+        =name=, hurrrh. Wisdom and wiggles.
+      </text>
+      <choice GotoID="Greeting2">How are you feeling?</choice>
+    </node>
+    <node ID="Greeting2" Inherits="Start">
+      <text>
+        Glk. I'm okay.~
+        Hrrrgh, humans are frequently frustrated. I am frustrated.~
+        Hungry.~
+        Fine. What ... about you.~
+        Oooooaaaaarrrghhk. Can't complain.~
+        Blp. Been better.~
+        Happy?
+      </text>
+    </node>
+    <node ID="What">
+      <text>Hggggg? {{emote|*Some part of Herman's body emits an unpleasant squelch.*}}
+      
+      Your words confuse me, urrg. In spite of my lifelong understanding of spoken... language.
+      
+      I am human. One human, a single human is me. Herman.
+      </text>
+      <choice GotoID="Human">In that case, tell me something interesting about being human.</choice>
+      <choice GotoID="End">...</choice>
+    </node>
+    <node ID="Human">
+      <text>Hlurb. It's great being human. I love to breathe... through three little holes instead of my whole skin.~
+      Oh, yes. As a human. Uggghhhhh. I can know true loneliness.~
+      I, a human... am easily biased by my complicated emotions.~
+      Glllrbbbb. I am not tired. I do not need to "lie down" or otherwise collapse. Hrrgh. Humans are well known persistence hunters.~
+      As a human, grlk. I love ... violence.~
+      Humans are mammals. They ... bleg ... we. Produce different discharge depending on body region.~
+      Human... genitalia is. Disgusting, factually. I read it in an Eater text.~
+      Did you know, that human fingers. Glp. May look dexterous, but they contain 'bones' that severely limit movement.
+      </text>
+      <choice GotoID="Start">I see.</choice>
+      <choice GotoID="Worms">Should I be worried that you're a corpse full of bugs or worms or rats pretending to be a human?</choice>
+      <choice GotoID="End">...</choice>
+    </node>
+    <node ID="Worms">
+      <text>...
+      
+      No.
+      </text>
+      <choice GotoID="Start">Hmm.</choice>
+    </node>
+  </conversation>
+</conversations>

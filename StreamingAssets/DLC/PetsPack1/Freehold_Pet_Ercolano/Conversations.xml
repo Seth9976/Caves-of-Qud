@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Ercolano">
+    <start ID="Welcome">
+      <text>
+        Take a seat, friend.~
+        Take a seat, =name=.~
+        Rest your bones, friend.~
+        Rest your bones, =name=.~
+        Fancy a rock?~
+        Come sit and rock your troubles away.~
+        Why am I here?~
+        Why are we here?~
+        Why are we here, =name=?~
+        Hee haw hee haw hee haw hee haw.~
+        Sway like leaves in the wind, my tall friend.~
+        Sit.~
+        Sit.~
+        Be still.~
+        Condense your motion to the Interval.~
+        The Interval is Periodic. It spans two ways: this and that.~
+        Don't you want to simplify your life?~
+        Be in the moment, =name=.~
+        Savor the moment.
+      </text>
+      <choice GotoID="CalmMe">Speak and calm me, Ercolano.</choice>
+      <choice GotoID="End">Goodbye, friend.</choice>
+    </start>
+    <node ID="CalmMe" Inherits="Welcome">
+      <!-- the CalmMe choice is hidden on CalmMe page, so goto CalmMeAgain -->
+      <choice GotoID="CalmMeAgain">Speak and calm me, Ercolano.</choice>
+    </node>
+    <node ID="CalmMeAgain" Inherits="Welcome">
+      <!-- this one goes back to CalmMe -->
+    </node>
+  </conversation>
+</conversations>
