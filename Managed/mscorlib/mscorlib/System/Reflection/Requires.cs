@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace System.Reflection
+{
+	// Token: 0x020008D3 RID: 2259
+	internal static class Requires
+	{
+		// Token: 0x06004B4E RID: 19278 RVA: 0x000F04CB File Offset: 0x000EE6CB
+		internal static void NotNull(object obj, string name)
+		{
+			if (obj == null)
+			{
+				throw new ArgumentNullException(name);
+			}
+		}
+	}
+}

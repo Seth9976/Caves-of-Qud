@@ -1,0 +1,19 @@
+﻿using System;
+
+namespace Galaxy.Api
+{
+	// Token: 0x02000191 RID: 401
+	public enum OverlayState
+	{
+		// Token: 0x0400036C RID: 876
+		OVERLAY_STATE_UNDEFINED,
+		// Token: 0x0400036D RID: 877
+		OVERLAY_STATE_NOT_SUPPORTED,
+		// Token: 0x0400036E RID: 878
+		OVERLAY_STATE_DISABLED,
+		// Token: 0x0400036F RID: 879
+		OVERLAY_STATE_FAILED_TO_INITIALIZE,
+		// Token: 0x04000370 RID: 880
+		OVERLAY_STATE_INITIALIZED
+	}
+}

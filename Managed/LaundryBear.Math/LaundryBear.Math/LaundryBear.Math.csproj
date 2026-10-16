@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F3AB866-14FA-4674-BCC1-E9864AE84382}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LaundryBear.Math</RootNamespace>
+    <AssemblyName>LaundryBear.Math</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Channel.cs" />
+    <Compile Include="GaussianWindow1d.cs" />
+    <Compile Include="GaussianWindow1D_CameraRotation.cs" />
+    <Compile Include="GaussianWindow1D_Quaternion.cs" />
+    <Compile Include="GaussianWindow1D_Vector3.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="IInputReferenceFrame.cs" />
+    <Compile Include="ISpan.cs" />
+    <Compile Include="Noise.cs" />
+    <Compile Include="PositionPredictor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RotateAroundInputReference.cs" />
+    <Compile Include="SpanFloat.cs" />
+    <Compile Include="StatisticalFloatQueue.cs" />
+    <Compile Include="StatisticalQueue.cs" />
+    <Compile Include="StatisticalVector3Queue.cs" />
+    <Compile Include="TransformInputReference.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="VectorUtils.cs" />
+    <Compile Include="VelocityContainer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

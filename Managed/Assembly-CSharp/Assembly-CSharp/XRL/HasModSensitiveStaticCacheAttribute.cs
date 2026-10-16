@@ -1,0 +1,11 @@
+﻿using System;
+
+namespace XRL
+{
+	/// <summary>Will look for a [ModSensitiveCacheInit] static void Method(), and reset any [ModSensitiveStaticCache] fields</summary>
+	// Token: 0x020004BF RID: 1215
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+	public class HasModSensitiveStaticCacheAttribute : Attribute
+	{
+	}
+}

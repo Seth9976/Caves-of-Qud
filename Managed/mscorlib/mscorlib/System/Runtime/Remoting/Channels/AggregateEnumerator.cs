@@ -1,0 +1,95 @@
+﻿using System;
+using System.Collections;
+
+namespace System.Runtime.Remoting.Channels
+{
+	// Token: 0x020005A3 RID: 1443
+	internal class AggregateEnumerator : IDictionaryEnumerator, IEnumerator
+	{
+		// Token: 0x0600380D RID: 14349 RVA: 0x000C93AE File Offset: 0x000C75AE
+		public AggregateEnumerator(IDictionary[] dics)
+		{
+			this.dictionaries = dics;
+			this.Reset();
+		}
+
+		// Token: 0x170007E1 RID: 2017
+		// (get) Token: 0x0600380E RID: 14350 RVA: 0x000C93C3 File Offset: 0x000C75C3
+		public DictionaryEntry Entry
+		{
+			get
+			{
+				return this.currente.Entry;
+			}
+		}
+
+		// Token: 0x170007E2 RID: 2018
+		// (get) Token: 0x0600380F RID: 14351 RVA: 0x000C93D0 File Offset: 0x000C75D0
+		public object Key
+		{
+			get
+			{
+				return this.currente.Key;
+			}
+		}
+
+		// Token: 0x170007E3 RID: 2019
+		// (get) Token: 0x06003810 RID: 14352 RVA: 0x000C93DD File Offset: 0x000C75DD
+		public object Value
+		{
+			get
+			{
+				return this.currente.Value;
+			}
+		}
+
+		// Token: 0x170007E4 RID: 2020
+		// (get) Token: 0x06003811 RID: 14353 RVA: 0x000C93EA File Offset: 0x000C75EA
+		public object Current
+		{
+			get
+			{
+				return this.currente.Current;
+			}
+		}
+
+		// Token: 0x06003812 RID: 14354 RVA: 0x000C93F8 File Offset: 0x000C75F8
+		public bool MoveNext()
+		{
+			if (this.pos >= this.dictionaries.Length)
+			{
+				return false;
+			}
+			if (this.currente.MoveNext())
+			{
+				return true;
+			}
+			this.pos++;
+			if (this.pos >= this.dictionaries.Length)
+			{
+				return false;
+			}
+			this.currente = this.dictionaries[this.pos].GetEnumerator();
+			return this.MoveNext();
+		}
+
+		// Token: 0x06003813 RID: 14355 RVA: 0x000C9464 File Offset: 0x000C7664
+		public void Reset()
+		{
+			this.pos = 0;
+			if (this.dictionaries.Length != 0)
+			{
+				this.currente = this.dictionaries[0].GetEnumerator();
+			}
+		}
+
+		// Token: 0x040025CA RID: 9674
+		private IDictionary[] dictionaries;
+
+		// Token: 0x040025CB RID: 9675
+		private int pos;
+
+		// Token: 0x040025CC RID: 9676
+		private IDictionaryEnumerator currente;
+	}
+}

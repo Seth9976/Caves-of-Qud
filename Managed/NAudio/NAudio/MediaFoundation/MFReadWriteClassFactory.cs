@@ -1,0 +1,16 @@
+﻿using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace NAudio.MediaFoundation
+{
+	// Token: 0x02000042 RID: 66
+	[Guid("48e2ed0f-98c2-4a37-bed5-166312ddd83f")]
+	[ComImport]
+	public class MFReadWriteClassFactory
+	{
+		// Token: 0x06000124 RID: 292
+		[MethodImpl(4096, MethodCodeType = 3)]
+		public extern MFReadWriteClassFactory();
+	}
+}

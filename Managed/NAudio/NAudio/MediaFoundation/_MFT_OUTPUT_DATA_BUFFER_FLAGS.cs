@@ -1,0 +1,20 @@
+﻿using System;
+
+namespace NAudio.MediaFoundation
+{
+	// Token: 0x02000061 RID: 97
+	[Flags]
+	public enum _MFT_OUTPUT_DATA_BUFFER_FLAGS
+	{
+		// Token: 0x0400032C RID: 812
+		None = 0,
+		// Token: 0x0400032D RID: 813
+		MFT_OUTPUT_DATA_BUFFER_INCOMPLETE = 16777216,
+		// Token: 0x0400032E RID: 814
+		MFT_OUTPUT_DATA_BUFFER_FORMAT_CHANGE = 256,
+		// Token: 0x0400032F RID: 815
+		MFT_OUTPUT_DATA_BUFFER_STREAM_END = 512,
+		// Token: 0x04000330 RID: 816
+		MFT_OUTPUT_DATA_BUFFER_NO_SAMPLE = 768
+	}
+}

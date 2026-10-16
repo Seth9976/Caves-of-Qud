@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7C8404B-FC9C-4D74-8D6C-A952D0ED809E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoslynCSharp</RootNamespace>
+    <AssemblyName>RoslynCSharp.Compiler</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeAnalysis" />
+    <Reference Include="Microsoft.CodeAnalysis.CSharp" />
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeDom\Compiler\RoslynCSharpCodeDomCompiler.cs" />
+    <Compile Include="Compiler\AssemblyReference.cs" />
+    <Compile Include="Compiler\AssemblyReferenceException.cs" />
+    <Compile Include="Compiler\AssemblyReferenceExtensions.cs" />
+    <Compile Include="Compiler\AssemblyReferenceFromAssemblyObject.cs" />
+    <Compile Include="Compiler\AssemblyReferenceFromFile.cs" />
+    <Compile Include="Compiler\AssemblyReferenceFromImage.cs" />
+    <Compile Include="Compiler\AssemblyReferenceFromStream.cs" />
+    <Compile Include="Compiler\CompilationError.cs" />
+    <Compile Include="Compiler\CompilationResult.cs" />
+    <Compile Include="Compiler\IMetadataReferenceProvider.cs" />
+    <Compile Include="Compiler\RoslynCSharpCompiler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

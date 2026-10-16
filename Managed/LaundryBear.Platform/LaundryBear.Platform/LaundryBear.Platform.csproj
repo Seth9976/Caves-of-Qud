@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D98D664-6572-4CB2-B6E7-2EDE9619FA30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LaundryBear.PlatformServices</RootNamespace>
+    <AssemblyName>LaundryBear.Platform</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LaundryBear.ServiceLocator">
+      <HintPath>..\..\..\LaundryBear.ServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="LaundryBear.Utilities">
+      <HintPath>..\..\..\LaundryBear.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\System.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AchievementResult.cs" />
+    <Compile Include="ActivityAvailability.cs" />
+    <Compile Include="ActivityEndType.cs" />
+    <Compile Include="ActivityRequestEventHandler.cs" />
+    <Compile Include="ChangeForPlatform.cs" />
+    <Compile Include="ChangeSpriteForPlatform.cs" />
+    <Compile Include="ChangeTextForPlatform.cs" />
+    <Compile Include="ControllerPairingChangedEventHandler.cs" />
+    <Compile Include="DelayShutdownScope_Platform.cs" />
+    <Compile Include="FileMetadata.cs" />
+    <Compile Include="IAchievement.cs" />
+    <Compile Include="IAchievementService.cs" />
+    <Compile Include="IActivityService.cs" />
+    <Compile Include="ICanDelayShutdown.cs" />
+    <Compile Include="IKeyboard.cs" />
+    <Compile Include="ILeaderboardId.cs" />
+    <Compile Include="ILocalID.cs" />
+    <Compile Include="INetworkService.cs" />
+    <Compile Include="IPerformanceService.cs" />
+    <Compile Include="IPlatform.cs" />
+    <Compile Include="IProfanityService.cs" />
+    <Compile Include="IRamStorageService.cs" />
+    <Compile Include="IStat.cs" />
+    <Compile Include="IStatService.cs" />
+    <Compile Include="IStorage.cs" />
+    <Compile Include="IStorageService.cs" />
+    <Compile Include="IUniqueID.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="IUserController.cs" />
+    <Compile Include="IUserControllerService.cs" />
+    <Compile Include="IUserService.cs" />
+    <Compile Include="KeyboardArgs.cs" />
+    <Compile Include="KeyboardResult.cs" />
+    <Compile Include="KeyboardType.cs" />
+    <Compile Include="LeaderboardEntry.cs" />
+    <Compile Include="LeaderboardNetworkRequest.cs" />
+    <Compile Include="LeaderboardResult.cs" />
+    <Compile Include="MountResult.cs" />
+    <Compile Include="NearLeaderboardNetworkRequest.cs" />
+    <Compile Include="NetworkRequestStatus.cs" />
+    <Compile Include="OnAchievementGet.cs" />
+    <Compile Include="OnAchievementSet.cs" />
+    <Compile Include="OnCleanProfanityComplete.cs" />
+    <Compile Include="OnCreateStorage.cs" />
+    <Compile Include="OnDeleteComplete.cs" />
+    <Compile Include="OnDirectoriesEnumerated.cs" />
+    <Compile Include="OnDirectoryCreate.cs" />
+    <Compile Include="OnDirectoryDelete.cs" />
+    <Compile Include="OnDirectoryExistCheck.cs" />
+    <Compile Include="OnFileExistCheck.cs" />
+    <Compile Include="OnFilesEnumerated.cs" />
+    <Compile Include="OnGetFileMetadataComplete.cs" />
+    <Compile Include="OnGetLaunchUser.cs" />
+    <Compile Include="OnLoadBlobBytesComplete.cs" />
+    <Compile Include="OnLoadBlobsBytesComplete.cs" />
+    <Compile Include="OnLoadBlobsStringComplete.cs" />
+    <Compile Include="OnLoadBlobStringComplete.cs" />
+    <Compile Include="OnProfilePictureRetrieved.cs" />
+    <Compile Include="OnQuotaRemainingCheck.cs" />
+    <Compile Include="OnSaveBlobComplete.cs" />
+    <Compile Include="OnSignInModalComplete.cs" />
+    <Compile Include="OnStatFloatValueGet.cs" />
+    <Compile Include="OnStatGet.cs" />
+    <Compile Include="OnStatIntValueGet.cs" />
+    <Compile Include="OnStatSet.cs" />
+    <Compile Include="OnStatValueSet.cs" />
+    <Compile Include="OnUserSignIn.cs" />
+    <Compile Include="OnUserSignOut.cs" />
+    <Compile Include="PhotoSize.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="PlatformFeature.cs" />
+    <Compile Include="PlatformFeatureGameObjectSwitcher.cs" />
+    <Compile Include="PlatformGameObjectSwitcher.cs" />
+    <Compile Include="PlatformResumeEventHandler.cs" />
+    <Compile Include="PlatformServicesLogger.cs" />
+    <Compile Include="PlatformShutdownEventHandler.cs" />
+    <Compile Include="PlatformSuspendEventHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuantileNetworkRequest.cs" />
+    <Compile Include="RangeLeaderboardNetworkRequest.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="RequestType.cs" />
+    <Compile Include="RequestUserType.cs" />
+    <Compile Include="SignInResult.cs" />
+    <Compile Include="StatResult.cs" />
+    <Compile Include="StorageResult.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="UsersLeaderboardNetworkRequest.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
